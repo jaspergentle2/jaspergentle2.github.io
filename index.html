@@ -1,0 +1,1806 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视大全 - 多元影像内容平台_精品原创与高清片库</title>
+<meta name="description" content="影视大全官方网站，深耕影视内容生态的影像平台，汇聚正版高清影像、原创专题与创作者社区，为用户提供值得信赖的品牌内容服务。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1524'/%3E%3Cpath d='M24 18l24 14-24 14z' fill='%23f5484a'/%3E%3Ccircle cx='16' cy='48' r='4' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ysq-ink:#0f1524;
+  --ysq-ink-2:#1b2338;
+  --ysq-paper:#f6f7fb;
+  --ysq-paper-2:#ffffff;
+  --ysq-red:#e63946;
+  --ysq-red-deep:#b3242f;
+  --ysq-gold:#f4b942;
+  --ysq-line:#e2e5ee;
+  --ysq-mute:#5d6579;
+  --ysq-soft:#eef0f6;
+  --ysq-radius:14px;
+  --ysq-shadow:0 10px 30px rgba(15,21,36,.09);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--ysq-ink);
+  background:var(--ysq-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+section{scroll-margin-top:118px}
+
+/* ---------- 吸顶区 ---------- */
+.ysq-sticky{position:sticky;top:0;z-index:80}
+.ysq-notice{
+  background:var(--ysq-ink);
+  color:#e8ebf4;
+  font-size:13.5px;
+  letter-spacing:.3px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.ysq-notice-inner{
+  max-width:1220px;margin:0 auto;padding:9px 20px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+}
+.ysq-notice-tag{
+  background:var(--ysq-red);color:#fff;font-size:12px;font-weight:700;
+  padding:1px 9px;border-radius:999px;letter-spacing:1px;flex:none;
+}
+.ysq-notice-text{flex:1;min-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ysq-notice-text b{color:var(--ysq-gold);font-weight:600}
+.ysq-notice-link{color:#a9b3cc;font-size:12.5px;white-space:nowrap}
+.ysq-notice-link:hover{color:#fff}
+
+.ysq-header{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--ysq-line);
+}
+.ysq-header-inner{
+  max-width:1220px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:24px;
+}
+.ysq-logo{display:flex;align-items:center;gap:10px;flex:none}
+.ysq-logo-mark{
+  width:38px;height:38px;border-radius:10px;background:var(--ysq-ink);
+  display:grid;place-items:center;position:relative;overflow:hidden;
+}
+.ysq-logo-mark::after{
+  content:"";width:0;height:0;border-left:11px solid var(--ysq-red);
+  border-top:7px solid transparent;border-bottom:7px solid transparent;
+  margin-left:3px;
+}
+.ysq-logo-word{line-height:1.15}
+.ysq-logo-word strong{font-size:18px;letter-spacing:1px;display:block}
+.ysq-logo-word span{font-size:10.5px;color:var(--ysq-mute);letter-spacing:2.4px;text-transform:uppercase}
+
+.ysq-nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+.ysq-nav a{
+  padding:7px 12px;border-radius:8px;font-size:14.5px;color:#374057;
+  transition:.2s;
+}
+.ysq-nav a:hover,.ysq-nav a.is-active{background:var(--ysq-soft);color:var(--ysq-red-deep);font-weight:600}
+
+.ysq-search-wrap{position:relative;flex:none;display:flex;align-items:center}
+.ysq-search{
+  display:flex;align-items:center;gap:6px;background:var(--ysq-soft);
+  border-radius:999px;padding:6px 6px 6px 14px;border:1px solid transparent;transition:.2s;
+}
+.ysq-search:focus-within{border-color:var(--ysq-red);background:#fff;box-shadow:0 0 0 3px rgba(230,57,70,.1)}
+.ysq-search input{
+  border:none;background:none;outline:none;width:158px;font-size:13.5px;color:var(--ysq-ink);
+}
+.ysq-search button{
+  background:var(--ysq-ink);color:#fff;font-size:12.5px;padding:5px 13px;border-radius:999px;transition:.2s;
+}
+.ysq-search button:hover{background:var(--ysq-red)}
+.ysq-search-hint{
+  position:absolute;top:calc(100% + 8px);right:0;width:280px;background:#fff;
+  border:1px solid var(--ysq-line);border-radius:12px;box-shadow:var(--ysq-shadow);
+  padding:8px;font-size:13px;display:none;z-index:60;
+}
+.ysq-search-hint.is-open{display:block}
+.ysq-search-hint li{padding:7px 10px;border-radius:8px;cursor:pointer;display:flex;justify-content:space-between;gap:10px}
+.ysq-search-hint li:hover{background:var(--ysq-soft)}
+.ysq-search-hint li em{font-style:normal;color:var(--ysq-red);font-weight:600}
+.ysq-search-hint li span{color:var(--ysq-mute);font-size:12px}
+.ysq-search-empty{color:var(--ysq-mute);padding:8px 10px;font-size:12.5px}
+
+.ysq-burger{display:none;flex-direction:column;gap:4.5px;padding:8px;flex:none}
+.ysq-burger span{width:20px;height:2px;background:var(--ysq-ink);border-radius:2px;transition:.25s}
+.ysq-burger.is-open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ysq-burger.is-open span:nth-child(2){opacity:0}
+.ysq-burger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ---------- 通用 ---------- */
+.ysq-wrap{max-width:1220px;margin:0 auto;padding:0 20px}
+.ysq-sec{padding:66px 0}
+.ysq-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.ysq-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2.6px;
+  color:var(--ysq-red-deep);font-weight:700;text-transform:uppercase;margin-bottom:10px;
+}
+.ysq-kicker::before{content:"";width:22px;height:2px;background:var(--ysq-red)}
+.ysq-sec-title{font-size:clamp(23px,3vw,32px);line-height:1.3;letter-spacing:.5px}
+.ysq-sec-sub{color:var(--ysq-mute);font-size:14px;margin-top:8px;max-width:620px}
+.ysq-more{
+  font-size:14px;color:var(--ysq-ink-2);border:1px solid var(--ysq-line);border-radius:999px;
+  padding:8px 18px;transition:.2s;white-space:nowrap;background:#fff;
+}
+.ysq-more:hover{border-color:var(--ysq-red);color:var(--ysq-red-deep)}
+
+.ysq-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 26px;border-radius:999px;font-size:14.5px;font-weight:600;transition:.22s;
+}
+.ysq-btn-primary{background:var(--ysq-red);color:#fff;box-shadow:0 8px 22px rgba(230,57,70,.28)}
+.ysq-btn-primary:hover{background:var(--ysq-red-deep);transform:translateY(-2px)}
+.ysq-btn-ghost{background:transparent;color:var(--ysq-ink);border:1px solid #c9cede}
+.ysq-btn-ghost:hover{border-color:var(--ysq-ink);background:#fff}
+
+/* ---------- 首屏 ---------- */
+.ysq-hero{
+  position:relative;
+  background:
+    radial-gradient(900px 480px at 88% -8%, rgba(230,57,70,.20), transparent 62%),
+    radial-gradient(700px 420px at 4% 100%, rgba(244,185,66,.16), transparent 65%),
+    linear-gradient(160deg,#111827 0%,#1b2436 46%,#0d1320 100%);
+  color:#fff;overflow:hidden;
+}
+.ysq-hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(760px 520px at 50% 0%,#000,transparent 88%);
+  pointer-events:none;
+}
+.ysq-hero-inner{
+  position:relative;max-width:1220px;margin:0 auto;padding:70px 20px 74px;
+  display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;
+}
+.ysq-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.6px;
+  color:#ffd9a6;border:1px solid rgba(255,217,166,.38);border-radius:999px;
+  padding:5px 14px;margin-bottom:20px;background:rgba(255,217,166,.07);
+}
+.ysq-hero-badge i{width:6px;height:6px;border-radius:50%;background:var(--ysq-gold);animation:ysqPulse 1.8s infinite}
+@keyframes ysqPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+.ysq-hero h1{font-size:clamp(38px,6vw,68px);line-height:1.06;letter-spacing:2px;font-weight:800}
+.ysq-hero h1 span{
+  background:linear-gradient(92deg,#ff8a8a,#f4b942 70%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.ysq-hero-en{font-size:12px;letter-spacing:6px;color:#8b96b0;margin-top:14px;text-transform:uppercase}
+.ysq-hero-lead{
+  margin-top:22px;font-size:15.5px;color:#c4cbdd;max-width:560px;
+}
+.ysq-hero-lead strong{color:#fff;font-weight:600}
+.ysq-hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.ysq-hero-actions .ysq-btn-ghost{color:#e6eaf5;border-color:rgba(255,255,255,.28)}
+.ysq-hero-actions .ysq-btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.ysq-hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:36px;
+  border-top:1px solid rgba(255,255,255,.12);padding-top:22px;max-width:520px;
+}
+.ysq-hero-stats b{display:block;font-size:26px;letter-spacing:.5px;color:#fff;font-weight:800}
+.ysq-hero-stats b em{font-style:normal;color:var(--ysq-gold);font-size:15px;margin-left:2px}
+.ysq-hero-stats span{font-size:12.5px;color:#8f9ab4;letter-spacing:1px}
+
+.ysq-hero-visual{position:relative}
+.ysq-hero-screen{
+  position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
+}
+.ysq-hero-screen img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.ysq-hero-screen-tag{
+  position:absolute;left:14px;top:14px;background:rgba(13,19,32,.78);
+  backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);
+  color:#fff;font-size:12px;padding:4px 12px;border-radius:999px;letter-spacing:1px;
+}
+.ysq-hero-screen-meta{
+  position:absolute;left:0;right:0;bottom:0;padding:26px 16px 14px;
+  background:linear-gradient(transparent,rgba(8,12,22,.9));
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.ysq-hero-screen-meta h3{font-size:15px;font-weight:600;letter-spacing:.4px}
+.ysq-hero-screen-meta p{font-size:12px;color:#a9b3cc}
+.ysq-play{
+  width:42px;height:42px;border-radius:50%;background:var(--ysq-red);flex:none;
+  display:grid;place-items:center;box-shadow:0 8px 20px rgba(230,57,70,.45);transition:.2s;
+}
+.ysq-play::after{content:"";width:0;height:0;border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.ysq-play:hover{transform:scale(1.08)}
+.ysq-hero-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.ysq-hero-thumbs figure{
+  border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.12);position:relative;
+}
+.ysq-hero-thumbs img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:.35s}
+.ysq-hero-thumbs figure:hover img{transform:scale(1.07)}
+.ysq-hero-thumbs figcaption{
+  position:absolute;bottom:0;left:0;right:0;font-size:11px;padding:12px 8px 6px;
+  background:linear-gradient(transparent,rgba(8,12,22,.9));white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;
+}
+
+/* ---------- 深度解析 ---------- */
+.ysq-about{background:var(--ysq-paper-2);border-bottom:1px solid var(--ysq-line)}
+.ysq-about-grid{display:grid;grid-template-columns:1fr 1.55fr;gap:46px;align-items:start}
+.ysq-about-aside{position:sticky;top:132px}
+.ysq-about-aside h2{font-size:clamp(24px,3vw,32px);line-height:1.32;margin-bottom:16px;letter-spacing:.5px}
+.ysq-about-aside p{color:var(--ysq-mute);font-size:14.5px}
+.ysq-about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.ysq-about-tags span{
+  font-size:12.5px;color:var(--ysq-ink-2);background:var(--ysq-soft);
+  border-radius:999px;padding:5px 13px;border:1px solid var(--ysq-line);
+}
+.ysq-about-body p{font-size:15px;color:#3c445a;margin-bottom:18px;text-align:justify}
+.ysq-about-body p strong{color:var(--ysq-ink)}
+.ysq-about-body h3{
+  font-size:17.5px;margin:26px 0 12px;padding-left:12px;position:relative;letter-spacing:.4px;
+}
+.ysq-about-body h3::before{
+  content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;border-radius:3px;background:var(--ysq-red);
+}
+.ysq-about-quote{
+  border-left:3px solid var(--ysq-gold);background:#fffbf0;border-radius:0 10px 10px 0;
+  padding:16px 20px;font-size:14.5px;color:#6b5632;margin:22px 0;
+}
+
+/* ---------- 焦点内容 ---------- */
+.ysq-focus-grid{display:grid;grid-template-columns:1.42fr 1fr;gap:20px}
+.ysq-feature{
+  position:relative;border-radius:var(--ysq-radius);overflow:hidden;min-height:330px;
+  display:flex;flex-direction:column;justify-content:flex-end;color:#fff;
+  box-shadow:var(--ysq-shadow);
+}
+.ysq-feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.ysq-feature:hover img{transform:scale(1.05)}
+.ysq-feature::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(transparent 22%,rgba(8,12,22,.88));
+}
+.ysq-feature-body{position:relative;z-index:2;padding:26px}
+.ysq-chip{
+  display:inline-block;font-size:11.5px;letter-spacing:1.4px;background:var(--ysq-red);
+  color:#fff;padding:3px 11px;border-radius:999px;margin-bottom:12px;
+}
+.ysq-feature h3{font-size:clamp(19px,2.4vw,25px);line-height:1.35;letter-spacing:.5px}
+.ysq-feature p{font-size:13.5px;color:#c8d0e0;margin-top:10px;max-width:520px}
+.ysq-feature-foot{display:flex;gap:16px;font-size:12.5px;color:#9ba7c0;margin-top:14px;flex-wrap:wrap}
+.ysq-focus-side{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ysq-mini{
+  border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--ysq-line);
+  transition:.24s;display:flex;flex-direction:column;
+}
+.ysq-mini:hover{transform:translateY(-4px);box-shadow:var(--ysq-shadow);border-color:#d3d8e6}
+.ysq-mini-img{position:relative;overflow:hidden}
+.ysq-mini-img img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:.4s}
+.ysq-mini:hover .ysq-mini-img img{transform:scale(1.06)}
+.ysq-mini-img .ysq-vtag{
+  position:absolute;bottom:8px;right:8px;font-size:11px;background:rgba(13,19,32,.72);
+  color:#fff;padding:2px 8px;border-radius:5px;backdrop-filter:blur(4px);
+}
+.ysq-mini-body{padding:13px 14px 15px;flex:1;display:flex;flex-direction:column;gap:6px}
+.ysq-mini-body h3{font-size:14.5px;line-height:1.5;font-weight:600}
+.ysq-mini-body p{font-size:12.5px;color:var(--ysq-mute);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ysq-mini-meta{font-size:12px;color:#8b93a6;display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- 视频流 ---------- */
+.ysq-videos{background:linear-gradient(180deg,#eef0f6,#f6f7fb)}
+.ysq-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.ysq-filter button{
+  font-size:13px;padding:6px 16px;border-radius:999px;background:#fff;
+  border:1px solid var(--ysq-line);color:#46506a;transition:.2s;
+}
+.ysq-filter button.is-active{background:var(--ysq-ink);color:#fff;border-color:var(--ysq-ink)}
+.ysq-filter button:hover:not(.is-active){border-color:var(--ysq-red);color:var(--ysq-red-deep)}
+.ysq-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ysq-card{
+  background:#fff;border-radius:var(--ysq-radius);border:1px solid var(--ysq-line);
+  overflow:hidden;transition:.26s;display:flex;flex-direction:column;
+}
+.ysq-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(15,21,36,.12);border-color:#d0d6e4}
+.ysq-card[hidden]{display:none}
+.ysq-card-cover{position:relative;overflow:hidden}
+.ysq-card-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.45s}
+.ysq-card:hover .ysq-card-cover img{transform:scale(1.06)}
+.ysq-card-cover .ysq-dur{
+  position:absolute;right:9px;bottom:9px;font-size:11.5px;background:rgba(8,12,22,.78);
+  color:#fff;padding:2px 7px;border-radius:5px;
+}
+.ysq-card-cover .ysq-cate{
+  position:absolute;left:9px;top:9px;font-size:11px;letter-spacing:1px;
+  background:rgba(255,255,255,.92);color:var(--ysq-ink);padding:2px 9px;border-radius:5px;font-weight:600;
+}
+.ysq-card-body{padding:15px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.ysq-card-body h3{font-size:15.5px;line-height:1.5;letter-spacing:.2px}
+.ysq-card-body h3:hover{color:var(--ysq-red-deep)}
+.ysq-card-body p{font-size:13px;color:var(--ysq-mute);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ysq-tags{display:flex;gap:6px;flex-wrap:wrap}
+.ysq-tags span{font-size:11.5px;color:#5a6480;background:var(--ysq-soft);padding:2px 9px;border-radius:5px}
+.ysq-card-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px dashed var(--ysq-line);padding-top:11px;margin-top:3px;
+}
+.ysq-author{display:flex;align-items:center;gap:7px;font-size:12.5px;color:#4b5470;min-width:0}
+.ysq-avatar{
+  width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex:none;
+  font-size:11.5px;font-weight:700;color:#fff;letter-spacing:.5px;
+}
+.ysq-card-actions{display:flex;gap:4px;flex:none}
+.ysq-icon-btn{
+  display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#7a8299;
+  padding:4px 7px;border-radius:7px;transition:.18s;
+}
+.ysq-icon-btn:hover{background:var(--ysq-soft);color:var(--ysq-red-deep)}
+.ysq-icon-btn.is-on{color:var(--ysq-red);font-weight:700}
+.ysq-icon-btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ysq-icon-btn.is-on svg.ysq-heart{fill:currentColor}
+
+/* ---------- 专题 ---------- */
+.ysq-topics{background:#fff}
+.ysq-topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ysq-topic{
+  position:relative;border-radius:var(--ysq-radius);overflow:hidden;min-height:250px;
+  color:#fff;display:flex;align-items:flex-end;box-shadow:var(--ysq-shadow);
+}
+.ysq-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.ysq-topic:hover img{transform:scale(1.06)}
+.ysq-topic::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 12%,rgba(9,13,24,.9))}
+.ysq-topic-body{position:relative;z-index:2;padding:22px}
+.ysq-topic-status{
+  font-size:11px;letter-spacing:1.2px;border:1px solid rgba(255,255,255,.45);
+  padding:2px 10px;border-radius:999px;display:inline-block;margin-bottom:10px;color:#ffe6b8;
+}
+.ysq-topic h3{font-size:17.5px;line-height:1.4}
+.ysq-topic p{font-size:12.8px;color:#c3cbdc;margin-top:7px}
+
+/* ---------- 创作者 ---------- */
+.ysq-creators{background:linear-gradient(180deg,#f7f8fc,#eef0f6)}
+.ysq-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ysq-creator{
+  background:#fff;border-radius:var(--ysq-radius);border:1px solid var(--ysq-line);
+  padding:20px;display:flex;gap:14px;transition:.24s;
+}
+.ysq-creator:hover{transform:translateY(-4px);box-shadow:var(--ysq-shadow);border-color:#d0d6e4}
+.ysq-creator-ava{
+  width:52px;height:52px;border-radius:14px;flex:none;display:grid;place-items:center;
+  color:#fff;font-weight:800;font-size:18px;letter-spacing:1px;
+}
+.ysq-creator-main{min-width:0;flex:1}
+.ysq-creator-main h3{font-size:15.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.ysq-creator-main h3 small{
+  font-size:10.5px;font-weight:600;color:var(--ysq-red-deep);background:#fdecee;
+  padding:1px 7px;border-radius:4px;letter-spacing:.6px;
+}
+.ysq-creator-main .ysq-field{font-size:12.5px;color:var(--ysq-red-deep);margin-top:3px;font-weight:600}
+.ysq-creator-main p{
+  font-size:12.8px;color:var(--ysq-mute);margin-top:7px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.ysq-creator-nums{display:flex;gap:14px;margin-top:9px;font-size:12px;color:#7a8299}
+.ysq-creator-nums b{color:var(--ysq-ink);font-size:13px;margin-right:2px}
+
+/* ---------- 榜单 + 故事 ---------- */
+.ysq-rankband{padding:66px 0;background:var(--ysq-ink);color:#fff;position:relative;overflow:hidden}
+.ysq-rankband::before{
+  content:"";position:absolute;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(230,57,70,.24),transparent 70%);
+  right:-180px;top:-220px;pointer-events:none;
+}
+.ysq-rankband .ysq-sec-head{position:relative}
+.ysq-rankband .ysq-sec-title{color:#fff}
+.ysq-rankband .ysq-sec-sub{color:#a3adc4}
+.ysq-rankband .ysq-kicker{color:var(--ysq-gold)}
+.ysq-rankband .ysq-kicker::before{background:var(--ysq-gold)}
+.ysq-rankband .ysq-more{background:transparent;color:#dfe4f0;border-color:rgba(255,255,255,.24)}
+.ysq-rankband .ysq-more:hover{border-color:var(--ysq-gold);color:var(--ysq-gold)}
+.ysq-rank-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+.ysq-rank{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--ysq-radius);padding:20px 20px 12px;
+}
+.ysq-rank-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.ysq-rank-head h3{font-size:15.5px;letter-spacing:.6px}
+.ysq-rank-head span{font-size:11px;color:#93a0ba;letter-spacing:1px}
+.ysq-rank ol{counter-reset:ysqRank;display:flex;flex-direction:column;gap:2px}
+.ysq-rank li{
+  display:flex;align-items:center;gap:11px;padding:9px 6px;border-radius:8px;font-size:13.5px;
+  color:#d3daea;transition:.18s;cursor:default;
+}
+.ysq-rank li:hover{background:rgba(255,255,255,.07)}
+.ysq-rank li::before{
+  counter-increment:ysqRank;content:counter(ysqRank);
+  width:20px;flex:none;text-align:center;font-weight:800;font-size:12.5px;color:#8b97b1;font-style:italic;
+}
+.ysq-rank li:nth-child(1)::before{color:var(--ysq-gold)}
+.ysq-rank li:nth-child(2)::before{color:#cfd6e6}
+.ysq-rank li:nth-child(3)::before{color:#e0a06a}
+.ysq-rank li em{
+  font-style:normal;margin-left:auto;font-size:11.5px;color:#8b97b1;white-space:nowrap;
+}
+
+/* ---------- 随笔 ---------- */
+.ysq-notes{background:#fff}
+.ysq-note-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ysq-note{
+  border:1px solid var(--ysq-line);border-radius:var(--ysq-radius);padding:22px 22px 18px;
+  background:linear-gradient(180deg,#fff,#fafbff);transition:.24s;display:flex;flex-direction:column;
+}
+.ysq-note:hover{box-shadow:var(--ysq-shadow);transform:translateY(-3px)}
+.ysq-note-mark{font-size:34px;line-height:1;color:#e6e9f2;font-family:Georgia,serif;font-weight:700}
+.ysq-note h3{font-size:15.5px;margin:4px 0 10px;line-height:1.55}
+.ysq-note p{font-size:13.3px;color:#555e74;flex:1}
+.ysq-note-foot{font-size:12px;color:#8b93a6;margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+
+/* ---------- 评价 ---------- */
+.ysq-reviews{background:linear-gradient(180deg,#eef0f6,#f6f7fb)}
+.ysq-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ysq-review{
+  background:#fff;border:1px solid var(--ysq-line);border-radius:var(--ysq-radius);
+  padding:19px 20px;display:flex;flex-direction:column;gap:10px;transition:.22s;
+}
+.ysq-review:hover{border-color:#d0d6e4;box-shadow:var(--ysq-shadow)}
+.ysq-review-top{display:flex;align-items:center;gap:10px}
+.ysq-review-top .ysq-avatar{width:32px;height:32px;font-size:12.5px}
+.ysq-review-top b{font-size:13.5px;display:block;line-height:1.3}
+.ysq-review-top small{font-size:11.5px;color:#8b93a6}
+.ysq-stars{margin-left:auto;font-size:12px;color:var(--ysq-gold);letter-spacing:1.5px}
+.ysq-review p{font-size:13.3px;color:#4d566c}
+.ysq-review-echo{
+  font-size:12px;color:#7a8299;background:var(--ysq-soft);border-radius:8px;padding:8px 11px;
+  border-left:2px solid var(--ysq-red);
+}
+
+/* ---------- 动态 & 伙伴 ---------- */
+.ysq-news{background:#fff}
+.ysq-news-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:start}
+.ysq-timeline{position:relative;padding-left:24px}
+.ysq-timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--ysq-line)}
+.ysq-tl-item{position:relative;padding-bottom:22px}
+.ysq-tl-item:last-child{padding-bottom:0}
+.ysq-tl-item::before{
+  content:"";position:absolute;left:-24px;top:6px;width:10px;height:10px;border-radius:50%;
+  background:#fff;border:2px solid var(--ysq-red);
+}
+.ysq-tl-item time{font-size:12px;color:#8b93a6;letter-spacing:.8px}
+.ysq-tl-item h3{font-size:15px;margin:3px 0 5px}
+.ysq-tl-item p{font-size:13.2px;color:var(--ysq-mute)}
+.ysq-partners{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:12px;
+}
+.ysq-partner{
+  border:1px solid var(--ysq-line);border-radius:12px;padding:16px 14px;
+  display:flex;align-items:center;gap:11px;background:linear-gradient(135deg,#fff,#f8f9fe);transition:.2s;
+}
+.ysq-partner:hover{border-color:var(--ysq-red);transform:translateY(-2px)}
+.ysq-partner-mark{
+  width:34px;height:34px;border-radius:9px;flex:none;display:grid;place-items:center;
+  color:#fff;font-size:12.5px;font-weight:800;letter-spacing:.5px;
+}
+.ysq-partner b{font-size:13.5px;display:block;line-height:1.3}
+.ysq-partner small{font-size:11.5px;color:#8b93a6}
+
+/* ---------- FAQ ---------- */
+.ysq-faq{background:linear-gradient(180deg,#f6f7fb,#eef0f6)}
+.ysq-faq-list{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.ysq-faq-item{background:#fff;border:1px solid var(--ysq-line);border-radius:12px;overflow:hidden;transition:.2s}
+.ysq-faq-item[open]{border-color:#d0d6e4;box-shadow:0 8px 22px rgba(15,21,36,.07)}
+.ysq-faq-item summary{
+  list-style:none;cursor:pointer;padding:15px 46px 15px 18px;font-size:14.5px;font-weight:600;
+  position:relative;transition:.18s;
+}
+.ysq-faq-item summary::-webkit-details-marker{display:none}
+.ysq-faq-item summary:hover{color:var(--ysq-red-deep)}
+.ysq-faq-item summary::after{
+  content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:19px;color:#8b93a6;font-weight:400;transition:.2s;
+}
+.ysq-faq-item[open] summary::after{content:"−";color:var(--ysq-red)}
+.ysq-faq-item p{padding:0 18px 17px;font-size:13.4px;color:var(--ysq-mute);border-top:1px dashed var(--ysq-line);padding-top:13px;margin:0 18px 0;margin-bottom:16px}
+
+/* ---------- 联系 ---------- */
+.ysq-contact{
+  background:
+    radial-gradient(700px 320px at 82% 0%,rgba(244,185,66,.16),transparent 65%),
+    linear-gradient(150deg,#141b2b,#0d1320);
+  color:#fff;
+}
+.ysq-contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.ysq-contact h2{font-size:clamp(23px,3vw,31px);line-height:1.34;margin-bottom:14px}
+.ysq-contact p{font-size:14.3px;color:#b8c1d6;max-width:520px}
+.ysq-contact-info{display:flex;flex-direction:column;gap:13px;margin-top:26px}
+.ysq-contact-info div{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:#d3daea}
+.ysq-contact-info div b{color:#fff;font-weight:600;flex:none;width:64px}
+.ysq-contact-card{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14);
+  border-radius:16px;padding:24px;
+}
+.ysq-contact-card h3{font-size:16px;margin-bottom:6px}
+.ysq-contact-card>p{font-size:13px;color:#a3adc4;margin-bottom:16px}
+.ysq-field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.ysq-contact-card input,.ysq-contact-card textarea,.ysq-contact-card select{
+  width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  border-radius:9px;padding:10px 12px;color:#fff;font-size:13px;outline:none;transition:.2s;
+  font-family:inherit;
+}
+.ysq-contact-card textarea{resize:vertical;min-height:76px}
+.ysq-contact-card input::placeholder,.ysq-contact-card textarea::placeholder{color:#7d88a3}
+.ysq-contact-card input:focus,.ysq-contact-card textarea:focus,.ysq-contact-card select:focus{
+  border-color:var(--ysq-gold);background:rgba(255,255,255,.1);
+}
+.ysq-contact-card .ysq-btn-primary{width:100%;margin-top:12px}
+
+/* ---------- 页脚 ---------- */
+.ysq-footer{background:#0a0f19;color:#8994ad;font-size:13px;padding:52px 0 26px}
+.ysq-footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:32px;margin-bottom:34px}
+.ysq-footer-brand .ysq-logo-word strong{color:#fff}
+.ysq-footer-brand .ysq-logo-word span{color:#6b7794}
+.ysq-footer-brand p{margin-top:14px;font-size:12.8px;line-height:1.85;max-width:320px;color:#7d88a3}
+.ysq-footer-col h3{font-size:13.5px;color:#dfe4f0;margin-bottom:13px;letter-spacing:.8px}
+.ysq-footer-col li{margin-bottom:8px}
+.ysq-footer-col a:hover{color:var(--ysq-gold)}
+.ysq-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.09);padding-top:20px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.3px;color:#6b7794;
+}
+.ysq-footer-bottom a:hover{color:var(--ysq-gold)}
+
+/* ---------- 交互组件 ---------- */
+.ysq-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--ysq-ink);color:#fff;font-size:13.5px;padding:11px 22px;border-radius:999px;
+  box-shadow:0 14px 34px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:.28s;z-index:200;
+  border:1px solid rgba(255,255,255,.14);max-width:88vw;text-align:center;
+}
+.ysq-toast.is-show{opacity:1;transform:translate(-50%,0)}
+.ysq-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;
+  background:var(--ysq-ink);color:#fff;display:grid;place-items:center;z-index:120;
+  box-shadow:0 10px 24px rgba(15,21,36,.3);opacity:0;pointer-events:none;transition:.26s;
+}
+.ysq-top.is-show{opacity:1;pointer-events:auto}
+.ysq-top:hover{background:var(--ysq-red)}
+.ysq-top svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+.ysq-modal{
+  position:fixed;inset:0;z-index:180;display:none;align-items:center;justify-content:center;padding:20px;
+  background:rgba(8,12,22,.62);backdrop-filter:blur(4px);
+}
+.ysq-modal.is-open{display:flex}
+.ysq-modal-box{
+  background:#fff;border-radius:16px;max-width:520px;width:100%;padding:26px;
+  position:relative;box-shadow:0 30px 70px rgba(0,0,0,.35);max-height:86vh;overflow:auto;
+}
+.ysq-modal-box h3{font-size:18px;margin-bottom:8px}
+.ysq-modal-box p{font-size:13.5px;color:var(--ysq-mute);margin-bottom:16px}
+.ysq-modal-close{
+  position:absolute;right:14px;top:12px;width:30px;height:30px;border-radius:50%;
+  display:grid;place-items:center;font-size:19px;color:#8b93a6;transition:.2s;
+}
+.ysq-modal-close:hover{background:var(--ysq-soft);color:var(--ysq-ink)}
+.ysq-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.ysq-share-row button{
+  flex:1;min-width:88px;padding:11px 10px;border-radius:10px;font-size:13px;
+  border:1px solid var(--ysq-line);transition:.2s;background:#fafbff;
+}
+.ysq-share-row button:hover{border-color:var(--ysq-red);color:var(--ysq-red-deep);background:#fff}
+.ysq-copy-row{display:flex;gap:8px}
+.ysq-copy-row input{
+  flex:1;border:1px solid var(--ysq-line);border-radius:9px;padding:10px 12px;font-size:12.8px;
+  background:var(--ysq-soft);color:#4b5470;outline:none;
+}
+.ysq-copy-row button{
+  background:var(--ysq-ink);color:#fff;font-size:13px;padding:0 18px;border-radius:9px;transition:.2s;flex:none;
+}
+.ysq-copy-row button:hover{background:var(--ysq-red)}
+.ysq-modal-form{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.ysq-modal-form input,.ysq-modal-form textarea{
+  border:1px solid var(--ysq-line);border-radius:9px;padding:10px 12px;font-size:13.2px;
+  outline:none;font-family:inherit;transition:.2s;
+}
+.ysq-modal-form input:focus,.ysq-modal-form textarea:focus{border-color:var(--ysq-red)}
+.ysq-modal-form textarea{min-height:84px;resize:vertical}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:1040px){
+  .ysq-hero-inner{grid-template-columns:1fr;gap:40px;padding-top:52px}
+  .ysq-about-grid{grid-template-columns:1fr;gap:26px}
+  .ysq-about-aside{position:static}
+  .ysq-focus-grid{grid-template-columns:1fr}
+  .ysq-video-grid{grid-template-columns:repeat(2,1fr)}
+  .ysq-topic-grid,.ysq-creator-grid,.ysq-note-grid,.ysq-review-grid,.ysq-rank-grid{grid-template-columns:repeat(2,1fr)}
+  .ysq-news-grid,.ysq-contact-grid{grid-template-columns:1fr;gap:30px}
+  .ysq-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .ysq-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--ysq-line);flex-direction:column;
+    padding:10px 16px 16px;gap:2px;box-shadow:0 18px 30px rgba(15,21,36,.1);
+  }
+  .ysq-nav.is-open{display:flex}
+  .ysq-header-inner{position:relative;flex-wrap:wrap;gap:12px}
+  .ysq-burger{display:flex}
+  .ysq-search-wrap{order:3;width:100%;flex:none}
+  .ysq-search{width:100%}
+  .ysq-search input{width:100%;flex:1}
+  .ysq-search-hint{width:100%;left:0;right:0}
+  .ysq-notice-text{white-space:normal;font-size:12.5px}
+  section{scroll-margin-top:150px}
+}
+@media(max-width:640px){
+  .ysq-sec{padding:48px 0}
+  .ysq-video-grid,.ysq-topic-grid,.ysq-creator-grid,.ysq-note-grid,.ysq-review-grid,.ysq-rank-grid,.ysq-focus-side,.ysq-partners{grid-template-columns:1fr}
+  .ysq-hero-stats{grid-template-columns:repeat(3,1fr);gap:6px}
+  .ysq-hero-stats b{font-size:20px}
+  .ysq-hero-stats span{font-size:11px;letter-spacing:0}
+  .ysq-footer-grid{grid-template-columns:1fr}
+  .ysq-field-row{grid-template-columns:1fr}
+  .ysq-hero-inner{padding:40px 18px 52px}
+  .ysq-toast{bottom:84px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="ysq-sticky">
+  <div class="ysq-notice">
+    <div class="ysq-notice-inner">
+      <span class="ysq-notice-tag">官方发布</span>
+      <div class="ysq-notice-text">影像专题《城市二十四帧·冬季篇》已完成<b>12 集</b>更新；创作者扶持计划第三期开放报名，新增<b>纪实叙事</b>与<b>动画短片</b>两个赛道。</div>
+      <a class="ysq-notice-link" href="#ysqNews">查看企业动态 →</a>
+    </div>
+  </div>
+
+  <header class="ysq-header">
+    <div class="ysq-header-inner">
+      <a class="ysq-logo" href="#ysqHome" aria-label="影视大全官方网站首页">
+        <span class="ysq-logo-mark" aria-hidden="true"></span>
+        <span class="ysq-logo-word"><strong>影视大全</strong><span>Yingshi Portal</span></span>
+      </a>
+      <nav class="ysq-nav" id="ysqNav" aria-label="主导航">
+        <a href="#ysqHome" class="is-active">首页</a>
+        <a href="#ysqAbout">品牌解析</a>
+        <a href="#ysqFocus">焦点内容</a>
+        <a href="#ysqVideos">影像库</a>
+        <a href="#ysqTopics">专题企划</a>
+        <a href="#ysqCreators">创作者</a>
+        <a href="#ysqNews">企业动态</a>
+        <a href="#ysqFaq">帮助中心</a>
+        <a href="#ysqContact">联系投稿</a>
+      </nav>
+      <div class="ysq-search-wrap">
+        <div class="ysq-search" role="search">
+          <input type="search" id="ysqSearchInput" placeholder="搜索影片、专题、创作者" aria-label="站内搜索">
+          <button type="button" id="ysqSearchBtn">搜索</button>
+        </div>
+        <ul class="ysq-search-hint" id="ysqSearchHint" aria-live="polite"></ul>
+      </div>
+      <button class="ysq-burger" id="ysqBurger" aria-label="展开导航菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<main>
+  <!-- 首屏 -->
+  <section class="ysq-hero" id="ysqHome">
+    <div class="ysq-hero-inner">
+      <div>
+        <span class="ysq-hero-badge"><i aria-hidden="true"></i>影视大全 · 品牌官方网站</span>
+        <h1>影视大全</h1>
+        <p class="ysq-hero-en">Discover · Archive · Together</p>
+        <p class="ysq-hero-lead">作为深耕影视内容生态的企业级影像平台，<strong>影视大全</strong>以专业策展与原创专题为核心，让每一部作品被认真对待。</p>
+        <div class="ysq-hero-actions">
+          <a class="ysq-btn ysq-btn-primary" href="#ysqVideos">进入影像库</a>
+          <a class="ysq-btn ysq-btn-ghost" href="#ysqCreators">认识创作者</a>
+          <button class="ysq-btn ysq-btn-ghost" type="button" data-ysq-share="影视大全 品牌官方网站｜多元影像内容平台">分享本站</button>
+        </div>
+        <div class="ysq-hero-stats">
+          <div><b data-ysq-count="186000">186000</b><em>+</em><span>片库条目</span></div>
+          <div><b data-ysq-count="4200">4200</b><em>+</em><span>入驻创作者</span></div>
+          <div><b data-ysq-count="27">27</b><em>个</em><span>内容专题</span></div>
+        </div>
+      </div>
+      <div class="ysq-hero-visual">
+        <div class="ysq-hero-screen">
+          <img alt="影视大全焦点影像《城市二十四帧·冬季篇》主视觉" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d2a45'/%3E%3Cstop offset='1' stop-color='%230c1220'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='1' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23e63946' stop-opacity='.85'/%3E%3Cstop offset='1' stop-color='%23f4b942' stop-opacity='.15'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g1)'/%3E%3Ccircle cx='640' cy='120' r='90' fill='%23f4b942' opacity='.22'/%3E%3Ccircle cx='640' cy='120' r='52' fill='%23f4b942' opacity='.4'/%3E%3Cpath d='M0 380 L160 300 L300 350 L470 250 L620 330 L800 260 L800 500 L0 500 Z' fill='%231a2338'/%3E%3Cpath d='M0 430 L180 370 L340 420 L520 340 L700 400 L800 370 L800 500 L0 500 Z' fill='url(%23g2)'/%3E%3Cg fill='%23ffffff' opacity='.75'%3E%3Crect x='60' y='60' width='120' height='8' rx='4'/%3E%3Crect x='60' y='84' width='72' height='8' rx='4' opacity='.6'/%3E%3Crect x='60' y='108' width='96' height='6' rx='3' opacity='.35'/%3E%3C/g%3E%3Cg transform='translate(370 210)'%3E%3Ccircle r='42' fill='%23e63946'/%3E%3Cpath d='M-12 -18 L24 0 L-12 18 Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E">
+          <span class="ysq-hero-screen-tag">焦点专题 · 更新至第 12 集</span>
+          <div class="ysq-hero-screen-meta">
+            <div>
+              <h3>城市二十四帧 · 冬季篇</h3>
+              <p>纪实影像 · 导演：林见野 · 2026 / 11 / 18</p>
+            </div>
+            <button class="ysq-play" type="button" data-ysq-share="城市二十四帧·冬季篇｜影视大全焦点专题" aria-label="分享专题 城市二十四帧"></button>
+          </div>
+        </div>
+        <div class="ysq-hero-thumbs">
+          <figure>
+            <img alt="影像《一碗热的距离》灶台与热汤特写" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%232b1d17'/%3E%3Ccircle cx='160' cy='120' r='62' fill='%23e07a3f' opacity='.5'/%3E%3Cellipse cx='160' cy='132' rx='54' ry='20' fill='%23f7e3c9'/%3E%3Cpath d='M96 132 Q160 96 224 132' stroke='%23e07a3f' stroke-width='6' fill='none'/%3E%3Cpath d='M130 74 q10 -20 0 -34 M160 70 q10 -20 0 -34 M190 74 q10 -20 0 -34' stroke='%23f7e3c9' stroke-width='5' fill='none' opacity='.55' stroke-linecap='round'/%3E%3C/svg%3E">
+            <figcaption>一碗热的距离</figcaption>
+          </figure>
+          <figure>
+            <img alt="影像《第九站台》夜色中的站台灯光" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%230e1a2b'/%3E%3Crect y='140' width='320' height='60' fill='%23172636'/%3E%3Cg stroke='%233f6b8a' stroke-width='3'%3E%3Cpath d='M0 168 H320'/%3E%3C/g%3E%3Cg fill='%23f4b942' opacity='.85'%3E%3Crect x='46' y='40' width='4' height='30' rx='2'/%3E%3Crect x='140' y='34' width='4' height='36' rx='2'/%3E%3Crect x='234' y='44' width='4' height='28' rx='2'/%3E%3C/g%3E%3Ccircle cx='48' cy='38' r='7' fill='%23ffe9b8'/%3E%3Ccircle cx='142' cy='30' r='8' fill='%23ffe9b8'/%3E%3Ccircle cx='236' cy='42' r='6' fill='%23ffe9b8'/%3E%3Cpath d='M240 26 l16 26 h-32 z' fill='%23e63946' opacity='.85'/%3E%3C/svg%3E">
+            <figcaption>第九站台</figcaption>
+          </figure>
+          <figure>
+            <img alt="影像《手作的光》木工工作台与工具" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23283a2f'/%3E%3Crect y='128' width='320' height='72' fill='%234a3524'/%3E%3Crect y='124' width='320' height='8' fill='%236b4a2f'/%3E%3Cg stroke='%23c9a06a' stroke-width='5' stroke-linecap='round'%3E%3Cpath d='M70 120 L92 58'/%3E%3Cpath d='M200 120 L182 62'/%3E%3C/g%3E%3Crect x='60' y='52' width='26' height='12' rx='4' fill='%23c9a06a'/%3E%3Crect x='172' y='54' width='24' height='12' rx='4' fill='%23c9a06a'/%3E%3Ccircle cx='268' cy='96' r='26' fill='%23f4b942' opacity='.35'/%3E%3Ccircle cx='268' cy='96' r='13' fill='%23ffe6a8' opacity='.7'/%3E%3C/svg%3E">
+            <figcaption>手作的光</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌解析 -->
+  <section class="ysq-about" id="ysqAbout">
+    <div class="ysq-wrap">
+      <div class="ysq-about-grid">
+        <aside class="ysq-about-aside">
+          <span class="ysq-kicker">Brand Analysis</span>
+          <h2>影视大全是什么：一份关于影像库与内容生态的官方说明</h2>
+          <p>从片库结构、策展逻辑到创作者机制，我们想把“影视大全”这四个字，讲得再清楚一点。</p>
+          <div class="ysq-about-tags">
+            <span>官方网站</span><span>正版高清</span><span>原创策展</span>
+            <span>内容生态</span><span>垂直领域</span><span>值得信赖</span>
+          </div>
+        </aside>
+        <div class="ysq-about-body">
+          <p><strong>影视大全</strong>是一个以影视内容为核心的品牌影像平台，由官方团队持续运营。它并不是一个简单的片目罗列之地，而是一套有组织、有立场、有温度的影像知识体系。我们相信，庞大的数量本身没有意义，真正有价值的是“被看见的顺序”——同一部作品，放在不同的策展脉络里，会显出完全不同的分量。</p>
+          <p>因此，影视大全的品牌内核由三条线索交织而成。第一条是<strong>规模化的片库</strong>：我们通过长期的版权合作与规范化入库流程，让不同年代、不同地域、不同类型的影像能够被稳定地检索与归档，用户不需要在无数无效链接中反复试探。第二条是<strong>专业化的策展</strong>：由编辑部与行业顾问共同构成的内容团队，围绕主题、导演、年代、地域、技法等维度设计专题，让浏览本身成为一种学习。第三条是<strong>开放的创作者社区</strong>：我们为影像创作者提供发布、讨论、成长的空间，让平台的判断不只来自编辑部，也来自社区的集体观看。</p>
+
+          <h3>一、片库：把“齐全”做成一种专业</h3>
+          <p>“影视大全”这个名字，天然带着一种承诺感。为了让这份承诺站得住，官方团队建立了一套分级归档机制：影片按照类型、年代、地区、时长、授权状态等维度被标记，并配有结构化的简介、幕后信息与相关推荐。我们认为，一个可靠的影像平台，首先要做一个好用的索引工具。用户在搜索框输入一个模糊的印象词，应当能够通过联想、标签与相似推荐，逐步逼近自己真正想找的那部作品。这种“逐步靠近”的体验，正是影视大全在垂直领域持续深耕的方向。</p>
+
+          <h3>二、策展：让作品彼此产生对话</h3>
+          <p>在片库之上，是我们更看重的部分——专题企划。编辑部会围绕一个具体的问题去组织内容，例如“冬天的城市如何被镜头记录下来”“手作影像里那些被放慢的时间”“配角如何改变一部片子的重心”。这些专题不追求热点，而追求留下来的可能。每一期专题都包含策展引言、片单、创作者访谈与延伸阅读，形成一份可以反复回看的影像笔记。很多用户告诉我们，他们来影视大全，最初是为了找片，最后却留在了专题页。</p>
+
+          <h3>三、创作者：社区是内容生态的活水</h3>
+          <p>影视大全的另一个重心是创作者社区。我们为独立导演、摄影爱好者、剪辑师、影评作者与影像研究者提供统一的展示空间。每位创作者拥有自己的主页，包含作品墙、创作手记、擅长领域与合作意向。平台定期开放主题征集，从日常记录到深度访谈，从实验影像到动画短片，我们希望通过持续的征集与反馈，让更多真实、温暖、有力量的作品被看见。这也是我们坚持“用户至上”的具体方式：不是把用户当作流量，而是把用户当作共同建构内容生态的伙伴。</p>
+          <div class="ysq-about-quote">我们更愿意把“影视大全”理解成一座持续扩建的影像图书馆：有人负责整理书架，有人负责写推荐语，也有人带来自己的作品，放在靠窗的位置。</div>
+          <p>在技术层面，影视大全坚持高清标准与正版授权原则，所有公开的影像条目均经过内容审核与画质校验；在社区层面，我们建立了分级的内容规范与反馈通道，让创作者与用户都能对内容质量提出意见。品牌的口碑不是一次传播带来的，而是每一次检索、每一次播放、每一次讨论累积起来的信任感。这也是我们对“值得信赖”这四个字的理解。</p>
+          <p>面向未来，影视大全将继续在三个方向投入：扩充多元类型的片库覆盖，尤其是纪录片、短片与独立创作；深化专题策展的方法论，与更多行业机构、院校开展合作；完善创作者成长路径，让新人也能获得清晰的进步台阶。我们希望这个品牌官网不只是一个入口，更是一份长期的承诺：影视大全，做一个认真对待影像的地方。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="ysq-sec" id="ysqFocus">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Focus Selection</span>
+          <h2 class="ysq-sec-title">焦点内容：本周被反复回看的影像</h2>
+          <p class="ysq-sec-sub">编辑部与社区共同推选，兼顾叙事深度与观看体验，适合安静地看完。</p>
+        </div>
+        <a class="ysq-more" href="#ysqVideos">查看全部内容</a>
+      </div>
+      <div class="ysq-focus-grid">
+        <article class="ysq-feature">
+          <img alt="焦点影像《长镜头里的旧城区》街巷晨光长镜头" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 720 460'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f6c98a'/%3E%3Cstop offset='1' stop-color='%234a5a6b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='460' fill='url(%23s1)'/%3E%3Cg fill='%23334155'%3E%3Crect x='40' y='180' width='120' height='280'/%3E%3Crect x='180' y='130' width='150' height='330'/%3E%3Crect x='480' y='160' width='180' height='300'/%3E%3C/g%3E%3Cg fill='%23f9dfae' opacity='.8'%3E%3Crect x='62' y='210' width='24' height='30'/%3E%3Crect x='104' y='210' width='24' height='30'/%3E%3Crect x='206' y='170' width='26' height='32'/%3E%3Crect x='252' y='170' width='26' height='32'/%3E%3Crect x='512' y='200' width='26' height='32'/%3E%3Crect x='566' y='200' width='26' height='32'/%3E%3C/g%3E%3Crect y='392' width='720' height='68' fill='%23242e3d'/%3E%3Ccircle cx='360' cy='120' r='46' fill='%23fff1cf' opacity='.9'/%3E%3Cg fill='%230f1524' opacity='.9'%3E%3Ccircle cx='300' cy='392' r='9'/%3E%3Cpath d='M292 400 q8 -40 16 0 z'/%3E%3C/g%3E%3C/svg%3E">
+          <div class="ysq-feature-body">
+            <span class="ysq-chip">本期主推</span>
+            <h3>长镜头里的旧城区：一条街的六分钟呼吸</h3>
+            <p>导演用一镜到底的方式走过旧城菜市场，从清晨的雾到上午的喧闹，把一条街的呼吸完整记录下来。影片不做解说，只保留环境声与对话碎片。</p>
+            <div class="ysq-feature-foot">
+              <span>作者：陈叙白</span><span>时长 6:12</span><span>纪实 · 城市探索</span><span>收藏 1.2 万</span>
+            </div>
+          </div>
+        </article>
+        <div class="ysq-focus-side">
+          <article class="ysq-mini">
+            <div class="ysq-mini-img">
+              <img alt="短片《三十七次呼吸》人物剪影与呼吸节奏可视化" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%231b2338'/%3E%3Ccircle cx='160' cy='96' r='58' fill='%234a5f8a' opacity='.35'/%3E%3Cg fill='none' stroke='%23e63946' stroke-width='3' opacity='.8'%3E%3Cpath d='M20 160 q40 -26 80 0 t80 0 t80 0 t60 0'/%3E%3C/g%3E%3Ccircle cx='160' cy='86' r='24' fill='%23222d44'/%3E%3Cpath d='M136 200 q24 -70 48 0 z' fill='%23222d44'/%3E%3Ccircle cx='152' cy='82' r='3' fill='%23f4b942'/%3E%3Ccircle cx='170' cy='82' r='3' fill='%23f4b942'/%3E%3C/svg%3E">
+              <span class="ysq-vtag">03:48</span>
+            </div>
+            <div class="ysq-mini-body">
+              <h3>三十七次呼吸</h3>
+              <p>实验短片，把一次焦虑发作拆成三十七次呼吸，配上环境噪音与手写字幕。</p>
+              <div class="ysq-mini-meta"><span>周与禾</span><span>情绪 · 实验</span></div>
+            </div>
+          </article>
+          <article class="ysq-mini">
+            <div class="ysq-mini-img">
+              <img alt="教程《三分钟学会画分镜》手绘分镜格子示例" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23f3f5fb'/%3E%3Cg stroke='%239aa6bf' stroke-width='2' fill='none'%3E%3Crect x='24' y='24' width='80' height='58'/%3E%3Crect x='120' y='24' width='80' height='58'/%3E%3Crect x='216' y='24' width='80' height='58'/%3E%3Crect x='24' y='100' width='80' height='58'/%3E%3Crect x='120' y='100' width='80' height='58'/%3E%3Crect x='216' y='100' width='80' height='58'/%3E%3C/g%3E%3Cg fill='%23e63946' opacity='.75'%3E%3Ccircle cx='64' cy='53' r='9'/%3E%3Crect x='150' y='40' width='20' height='20'/%3E%3Cpath d='M240 70 l20 -22 l20 22 z'/%3E%3C/g%3E%3Cg stroke='%234a5f8a' stroke-width='2' opacity='.7'%3E%3Cpath d='M40 132 h48 M40 146 h32'/%3E%3Cpath d='M136 132 h48'/%3E%3C/g%3E%3C/svg%3E">
+              <span class="ysq-vtag">08:20</span>
+            </div>
+            <div class="ysq-mini-body">
+              <h3>三分钟学会画分镜</h3>
+              <p>从镜头景别到转场节奏，用一个日常场景完成六格分镜的完整示范。</p>
+              <div class="ysq-mini-meta"><span>李砚舟</span><span>教程 · 技巧</span></div>
+            </div>
+          </article>
+          <article class="ysq-mini">
+            <div class="ysq-mini-img">
+              <img alt="访谈《把镜头交给邻居》社区拍摄现场照片" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23e8eee6'/%3E%3Crect y='140' width='320' height='60' fill='%23b9c9b4'/%3E%3Ccircle cx='110' cy='96' r='30' fill='%23f0c9a8'/%3E%3Cpath d='M78 200 q32 -70 64 0 z' fill='%23374d63'/%3E%3Ccircle cx='220' cy='102' r='26' fill='%23e0b48f'/%3E%3Cpath d='M192 200 q28 -62 56 0 z' fill='%23804a3c'/%3E%3Crect x='160' y='52' width='44' height='30' rx='6' fill='%23222d44'/%3E%3Ccircle cx='182' cy='67' r='9' fill='%23cfe0ea'/%3E%3C/svg%3E">
+              <span class="ysq-vtag">14:05</span>
+            </div>
+            <div class="ysq-mini-body">
+              <h3>把镜头交给邻居</h3>
+              <p>一次社区影像工作坊的记录，让没拍过片的居民完成自己的第一支短片。</p>
+              <div class="ysq-mini-meta"><span>沈知远</span><span>访谈 · 社区</span></div>
+            </div>
+          </article>
+          <article class="ysq-mini">
+            <div class="ysq-mini-img">
+              <img alt="影像《山雾里的三种声音》山间雾气与竹林" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23dfe8e0'/%3E%3Cpath d='M0 150 L70 84 L120 140 L180 70 L250 132 L320 92 L320 200 L0 200 Z' fill='%23a8bfad' opacity='.85'/%3E%3Cpath d='M0 176 L80 130 L150 172 L230 126 L320 168 L320 200 L0 200 Z' fill='%236f8f78'/%3E%3Cg stroke='%23465f4c' stroke-width='6' stroke-linecap='round'%3E%3Cpath d='M56 200 L60 120'/%3E%3Cpath d='M262 200 L258 130'/%3E%3C/g%3E%3Cg fill='%23ffffff' opacity='.55'%3E%3Cellipse cx='160' cy='118' rx='110' ry='18'/%3E%3Cellipse cx='90' cy='148' rx='80' ry='13'/%3E%3C/g%3E%3C/svg%3E">
+              <span class="ysq-vtag">11:33</span>
+            </div>
+            <div class="ysq-mini-body">
+              <h3>山雾里的三种声音</h3>
+              <p>竹林的风、远处的电机、脚下碎石，一次关于“安静”的声音采集实验。</p>
+              <div class="ysq-mini-meta"><span>许南山</span><span>自然 · 声音</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像库 -->
+  <section class="ysq-sec ysq-videos" id="ysqVideos">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Video Archive</span>
+          <h2 class="ysq-sec-title">影像库：六个值得完整看完的条目</h2>
+          <p class="ysq-sec-sub">不同题材、不同节奏，点击标签可以快速筛选感兴趣的方向。</p>
+        </div>
+        <a class="ysq-more" href="#ysqCreators">按创作者浏览</a>
+      </div>
+      <div class="ysq-filter" id="ysqFilter" role="group" aria-label="内容标签筛选">
+        <button type="button" class="is-active" data-ysq-filter="all">全部</button>
+        <button type="button" data-ysq-filter="纪实">纪实</button>
+        <button type="button" data-ysq-filter="教程">教程</button>
+        <button type="button" data-ysq-filter="访谈">访谈</button>
+        <button type="button" data-ysq-filter="生活">生活</button>
+        <button type="button" data-ysq-filter="实验">实验</button>
+      </div>
+      <div class="ysq-video-grid" id="ysqVideoGrid">
+
+        <article class="ysq-card" data-ysq-category="纪实">
+          <div class="ysq-card-cover">
+            <img alt="纪实影像《菜市场的十二小时》摊位与灯光" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f1e3c8'/%3E%3Crect y='176' width='480' height='94' fill='%23c9a86a'/%3E%3Cg fill='%23e05c4b'%3E%3Ccircle cx='80' cy='150' r='16'/%3E%3Ccircle cx='112' cy='158' r='13'/%3E%3Ccircle cx='146' cy='148' r='15'/%3E%3C/g%3E%3Cg fill='%236c8f4a'%3E%3Ccircle cx='220' cy='152' r='15'/%3E%3Ccircle cx='252' cy='160' r='12'/%3E%3C/g%3E%3Cg fill='%23f4b942'%3E%3Ccircle cx='330' cy='152' r='16'/%3E%3Ccircle cx='366' cy='160' r='12'/%3E%3C/g%3E%3Crect y='96' width='480' height='14' fill='%238c6b4a'/%3E%3Cg stroke='%238c6b4a' stroke-width='5'%3E%3Cpath d='M40 96 v-56 M200 96 v-56 M360 96 v-56'/%3E%3C/g%3E%3Cg fill='%23fff8e8'%3E%3Ccircle cx='120' cy='44' r='14'/%3E%3Ccircle cx='280' cy='36' r='12'/%3E%3Ccircle cx='420' cy='48' r='10'/%3E%3C/g%3E%3C/svg%3E">
+            <span class="ysq-cate">纪实</span>
+            <span class="ysq-dur">12:40</span>
+          </div>
+          <div class="ysq-card-body">
+            <h3>菜市场的十二小时</h3>
+            <p>从凌晨四点的到货到傍晚收摊，记录一个社区菜场完整的运转节奏。</p>
+            <div class="ysq-tags"><span>城市探索</span><span>日常记录</span></div>
+            <div class="ysq-card-foot">
+              <div class="ysq-author"><span class="ysq-avatar" style="background:#e63946">陈</span>陈叙白</div>
+              <div class="ysq-card-actions">
+                <button class="ysq-icon-btn" type="button" data-ysq-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a3.8 3.8 0 017-2.1A3.8 3.8 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                  <span data-ysq-like-num>1842</span>
+                </button>
+                <button class="ysq-icon-btn" type="button" data-ysq-share="菜市场的十二小时｜影视大全" aria-label="分享 菜市场的十二小时">
+                  <svg viewBox="0 0 24 24"><path d="M4 12v7h16v-7"/><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ysq-card" data-ysq-category="教程">
+          <div class="ysq-card-cover">
+            <img alt="教程《手机也能拍出好夜景》夜色城市与相机界面" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%230f1a2c'/%3E%3Cg fill='%23f4b942' opacity='.9'%3E%3Crect x='40' y='180' width='20' height='50'/%3E%3Crect x='80' y='150' width='20' height='80'/%3E%3Crect x='120' y='196' width='20' height='34'/%3E%3Crect x='340' y='164' width='20' height='66'/%3E%3Crect x='380' y='188' width='20' height='42'/%3E%3C/g%3E%3Cg fill='%236b8fc4' opacity='.85'%3E%3Crect x='170' y='130' width='20' height='100'/%3E%3Crect x='210' y='156' width='20' height='74'/%3E%3Crect x='250' y='110' width='20' height='120'/%3E%3Crect x='290' y='150' width='20' height='80'/%3E%3C/g%3E%3Ccircle cx='400' cy='60' r='28' fill='%23fff3d0' opacity='.85'/%3E%3Crect x='150' y='30' width='180' height='54' rx='10' fill='%23ffffff' opacity='.1'/%3E%3Cg stroke='%23ffffff' stroke-width='2' opacity='.6' fill='none'%3E%3Crect x='164' y='42' width='34' height='24' rx='4'/%3E%3C/svg%3E">
+            <span class="ysq-cate">教程</span>
+            <span class="ysq-dur">09:15</span>
+          </div>
+          <div class="ysq-card-body">
+            <h3>手机也能拍出好夜景：四个设置就够了</h3>
+            <p>不讲玄学构图，只讲曝光、对焦、稳定与后期四件事，看完就能用。</p>
+            <div class="ysq-tags"><span>实用技巧</span><span>教程干货</span></div>
+            <div class="ysq-card-foot">
+              <div class="ysq-author"><span class="ysq-avatar" style="background:#2f4f7f">李</span>李砚舟</div>
+              <div class="ysq-card-actions">
+                <button class="ysq-icon-btn" type="button" data-ysq-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a3.8 3.8 0 017-2.1A3.8 3.8 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                  <span data-ysq-like-num>3260</span>
+                </button>
+                <button class="ysq-icon-btn" type="button" data-ysq-share="手机也能拍出好夜景｜影视大全" aria-label="分享 手机也能拍出好夜景">
+                  <svg viewBox="0 0 24 24"><path d="M4 12v7h16v-7"/><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ysq-card" data-ysq-category="访谈">
+          <div class="ysq-card-cover">
+            <img alt="访谈《我们为什么还要去电影院》影厅座椅与银幕" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23171822'/%3E%3Crect x='80' y='24' width='320' height='150' rx='6' fill='%23f0ede4'/%3E%3Crect x='96' y='40' width='288' height='118' fill='%234f5a70'/%3E%3Cg fill='%231b2338'%3E%3Crect x='40' y='180' width='60' height='70' rx='8'/%3E%3Crect x='120' y='188' width='60' height='62' rx='8'/%3E%3Crect x='200' y='192' width='60' height='58' rx='8'/%3E%3Crect x='280' y='188' width='60' height='62' rx='8'/%3E%3Crect x='360' y='180' width='60' height='70' rx='8'/%3E%3C/g%3E%3Ccircle cx='240' cy='99' r='26' fill='%23f4b942' opacity='.8'/%3E%3Cpath d='M232 86 l22 13 l-22 13 z' fill='%23171822'/%3E%3C/svg%3E">
+            <span class="ysq-cate">访谈</span>
+            <span class="ysq-dur">21:08</span>
+          </div>
+          <div class="ysq-card-body">
+            <h3>我们为什么还要去电影院</h3>
+            <p>与三位影院经理、两位观众聊了两小时，谈到一个词反复出现：一起。</p>
+            <div class="ysq-tags"><span>人物访谈</span><span>行业观察</span></div>
+            <div class="ysq-card-foot">
+              <div class="ysq-author"><span class="ysq-avatar" style="background:#7a4b9c">沈</span>沈知远</div>
+              <div class="ysq-card-actions">
+                <button class="ysq-icon-btn" type="button" data-ysq-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a3.8 3.8 0 017-2.1A3.8 3.8 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                  <span data-ysq-like-num>2745</span>
+                </button>
+                <button class="ysq-icon-btn" type="button" data-ysq-share="我们为什么还要去电影院｜影视大全" aria-label="分享 我们为什么还要去电影院">
+                  <svg viewBox="0 0 24 24"><path d="M4 12v7h16v-7"/><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ysq-card" data-ysq-category="生活">
+          <div class="ysq-card-cover">
+            <img alt="生活影像《一个人做晚饭的第五十天》厨房台面与餐盘" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f6efe2'/%3E%3Crect y='190' width='480' height='80' fill='%23c9a884'/%3E%3Cellipse cx='240' cy='196' rx='110' ry='22' fill='%23ffffff'/%3E%3Cellipse cx='240' cy='192' rx='86' ry='16' fill='%23e8d3b4'/%3E%3Ccircle cx='214' cy='190' r='12' fill='%23d95e3c'/%3E%3Ccircle cx='248' cy='196' r='10' fill='%236f9147'/%3E%3Ccircle cx='272' cy='188' r='9' fill='%23f0b13c'/%3E%3Cg fill='%23e0c8a8'%3E%3Crect x='60' y='92' width='46' height='66' rx='6'/%3E%3Crect x='380' y='80' width='40' height='78' rx='6'/%3E%3C/g%3E%3Cpath d='M120 120 q16 -26 32 0' stroke='%23b98a5e' stroke-width='5' fill='none'/%3E%3Ccircle cx='340' cy='120' r='22' fill='none' stroke='%23b98a5e' stroke-width='5'/%3E%3C/svg%3E">
+            <span class="ysq-cate">生活</span>
+            <span class="ysq-dur">07:52</span>
+          </div>
+          <div class="ysq-card-body">
+            <h3>一个人做晚饭的第五十天</h3>
+            <p>不是美食教程，只是把每天的一顿饭拍下来，坚持到第五十天的一些变化。</p>
+            <div class="ysq-tags"><span>生活方式</span><span>治愈影像</span></div>
+            <div class="ysq-card-foot">
+              <div class="ysq-author"><span class="ysq-avatar" style="background:#c46b3d">苏</span>苏小满</div>
+              <div class="ysq-card-actions">
+                <button class="ysq-icon-btn" type="button" data-ysq-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a3.8 3.8 0 017-2.1A3.8 3.8 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                  <span data-ysq-like-num>5120</span>
+                </button>
+                <button class="ysq-icon-btn" type="button" data-ysq-share="一个人做晚饭的第五十天｜影视大全" aria-label="分享 一个人做晚饭的第五十天">
+                  <svg viewBox="0 0 24 24"><path d="M4 12v7h16v-7"/><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ysq-card" data-ysq-category="实验">
+          <div class="ysq-card-cover">
+            <img alt="实验影像《被折叠的三分钟》几何光斑抽象画面" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231b1f30'/%3E%3Cg opacity='.9'%3E%3Ccircle cx='130' cy='90' r='60' fill='%23e63946' opacity='.5'/%3E%3Crect x='200' y='60' width='120' height='120' fill='%23f4b942' opacity='.35' transform='rotate(18 260 120)'/%3E%3Cpath d='M300 220 L400 70 L440 220 Z' fill='%234a6fb0' opacity='.45'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-width='1.5' opacity='.35' fill='none'%3E%3Cpath d='M0 200 Q120 140 240 200 T480 200'/%3E%3Cpath d='M0 230 Q120 170 240 230 T480 230'/%3E%3C/g%3E%3C/svg%3E">
+            <span class="ysq-cate">实验</span>
+            <span class="ysq-dur">03:24</span>
+          </div>
+          <div class="ysq-card-body">
+            <h3>被折叠的三分钟</h3>
+            <p>把同一段三分钟素材剪成七个版本，叠放、错位、回环，探索时间的可折叠性。</p>
+            <div class="ysq-tags"><span>创作幕后</span><span>艺术美学</span></div>
+            <div class="ysq-card-foot">
+              <div class="ysq-author"><span class="ysq-avatar" style="background:#3f6b6a">周</span>周与禾</div>
+              <div class="ysq-card-actions">
+                <button class="ysq-icon-btn" type="button" data-ysq-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a3.8 3.8 0 017-2.1A3.8 3.8 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                  <span data-ysq-like-num>986</span>
+                </button>
+                <button class="ysq-icon-btn" type="button" data-ysq-share="被折叠的三分钟｜影视大全" aria-label="分享 被折叠的三分钟">
+                  <svg viewBox="0 0 24 24"><path d="M4 12v7h16v-7"/><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="ysq-card" data-ysq-category="纪实">
+          <div class="ysq-card-cover">
+            <img alt="纪实影像《守着一间旧书店的人》书架与木质柜台" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23241c14'/%3E%3Cg fill='%238a5f3c'%3E%3Crect x='24' y='20' width='432' height='10'/%3E%3Crect x='24' y='100' width='432' height='10'/%3E%3Crect x='24' y='180' width='432' height='10'/%3E%3C/g%3E%3Cg%3E%3Crect x='40' y='38' width='22' height='62' fill='%23c25c4a'/%3E%3Crect x='68' y='44' width='18' height='56' fill='%23d9b26a'/%3E%3Crect x='92' y='36' width='24' height='64' fill='%235c7a52'/%3E%3Crect x='124' y='48' width='18' height='52' fill='%236a7fa8'/%3E%3Crect x='300' y='40' width='22' height='60' fill='%23c25c4a'/%3E%3Crect x='330' y='46' width='18' height='54' fill='%239a7fc0'/%3E%3Crect x='400' y='38' width='24' height='62' fill='%23d9b26a'/%3E%3C/g%3E%3Ccircle cx='250' cy='150' r='26' fill='%23f0c9a8'/%3E%3Cpath d='M214 262 q36 -80 72 0 z' fill='%234a5f8a'/%3E%3Crect x='150' y='196' width='200' height='12' rx='4' fill='%238a5f3c'/%3E%3C/svg%3E">
+            <span class="ysq-cate">纪实</span>
+            <span class="ysq-dur">17:26</span>
+          </div>
+          <div class="ysq-card-body">
+            <h3>守着一间旧书店的人</h3>
+            <p>老板说书店不赚钱，但“总得有人在”。一支关于坚持与选择的小型纪实。</p>
+            <div class="ysq-tags"><span>人物访谈</span><span>情感故事</span></div>
+            <div class="ysq-card-foot">
+              <div class="ysq-author"><span class="ysq-avatar" style="background:#5a6b3a">许</span>许南山</div>
+              <div class="ysq-card-actions">
+                <button class="ysq-icon-btn" type="button" data-ysq-like aria-pressed="false">
+                  <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9a3.8 3.8 0 017-2.1A3.8 3.8 0 0119 11c0 4.6-7 9-7 9z"/></svg>
+                  <span data-ysq-like-num>4188</span>
+                </button>
+                <button class="ysq-icon-btn" type="button" data-ysq-share="守着一间旧书店的人｜影视大全" aria-label="分享 守着一间旧书店的人">
+                  <svg viewBox="0 0 24 24"><path d="M4 12v7h16v-7"/><path d="M12 16V4"/><path d="M8 8l4-4 4 4"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="ysq-sec ysq-topics" id="ysqTopics">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Editorial Projects</span>
+          <h2 class="ysq-sec-title">专题企划：把零散的作品编成一条线</h2>
+          <p class="ysq-sec-sub">每期专题由编辑部策划，包含策展引言、片单、创作者访谈与延伸阅读。</p>
+        </div>
+        <a class="ysq-more" href="#ysqNews">专题更新日志</a>
+      </div>
+      <div class="ysq-topic-grid">
+        <article class="ysq-topic">
+          <img alt="专题《城市二十四帧》夜景街道霓虹" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 320'%3E%3Crect width='480' height='320' fill='%23142036'/%3E%3Cg fill='%232c4566'%3E%3Crect x='0' y='110' width='90' height='210'/%3E%3Crect x='110' y='70' width='80' height='250'/%3E%3Crect x='330' y='90' width='90' height='230'/%3E%3Crect x='210' y='140' width='100' height='180'/%3E%3C/g%3E%3Cg fill='%23f4b942' opacity='.85'%3E%3Crect x='126' y='96' width='16' height='20'/%3E%3Crect x='154' y='96' width='16' height='20'/%3E%3Crect x='126' y='136' width='16' height='20'/%3E%3Crect x='350' y='120' width='16' height='20'/%3E%3C/g%3E%3Cg fill='%23e63946' opacity='.8'%3E%3Crect x='228' y='170' width='16' height='18'/%3E%3Crect x='256' y='170' width='16' height='18'/%3E%3C/g%3E%3Crect y='290' width='480' height='30' fill='%230b1220'/%3E%3Ccircle cx='392' cy='52' r='26' fill='%23dfe8ff' opacity='.7'/%3E%3C/svg%3E">
+          <div class="ysq-topic-body">
+            <span class="ysq-topic-status">更新至第 12 集</span>
+            <h3>城市二十四帧 · 冬季篇</h3>
+            <p>十二位创作者，十二个城市角落，用各自的方式记录冬天的光。</p>
+          </div>
+        </article>
+        <article class="ysq-topic">
+          <img alt="专题《手艺人的下午》陶轮与手部特写" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 320'%3E%3Crect width='480' height='320' fill='%23efe4d2'/%3E%3Ccircle cx='240' cy='196' r='96' fill='%23b98a5e' opacity='.5'/%3E%3Cellipse cx='240' cy='200' rx='70' ry='24' fill='%23d8b98f'/%3E%3Cpath d='M170 200 q0 -72 70 -72 q70 0 70 72' fill='none' stroke='%238c6b4a' stroke-width='8'/%3E%3Cg fill='%23f0c9a8'%3E%3Ccircle cx='196' cy='112' r='14'/%3E%3Ccircle cx='286' cy='112' r='14'/%3E%3C/g%3E%3Crect x='20' y='30' width='90' height='10' rx='5' fill='%23c9a884'/%3E%3Crect x='20' y='52' width='58' height='8' rx='4' fill='%23c9a884' opacity='.7'/%3E%3Ccircle cx='404' cy='66' r='30' fill='%23e6b85c' opacity='.55'/%3E%3C/svg%3E">
+          <div class="ysq-topic-body">
+            <span class="ysq-topic-status">已完结 · 8 集</span>
+            <h3>手艺人的下午</h3>
+            <p>陶艺、木作、织补、制琴，四双手和它们背后的时间观。</p>
+          </div>
+        </article>
+        <article class="ysq-topic">
+          <img alt="专题《配角的重量》舞台侧光下的演员身影" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 320'%3E%3Crect width='480' height='320' fill='%23201a28'/%3E%3Cpath d='M0 320 L160 0 L320 320 Z' fill='%233a2f4a' opacity='.7'/%3E%3Ccircle cx='240' cy='140' r='40' fill='%23e0c4a8'/%3E%3Cpath d='M186 320 q54 -110 108 0 z' fill='%234f3f66'/%3E%3Cg stroke='%23f4b942' stroke-width='3' opacity='.6' fill='none'%3E%3Cpath d='M60 40 L120 120 M420 40 L360 120'/%3E%3C/g%3E%3Ccircle cx='240' cy='140' r='64' fill='none' stroke='%23f4b942' stroke-width='2' opacity='.35'/%3E%3C/svg%3E">
+          <div class="ysq-topic-body">
+            <span class="ysq-topic-status">筹备中 · 预告</span>
+            <h3>配角的重量</h3>
+            <p>把镜头转向那些只有几句台词的人，聊聊表演里的分寸感。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section class="ysq-sec ysq-creators" id="ysqCreators">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Creators</span>
+          <h2 class="ysq-sec-title">创作者矩阵：六位持续更新的人</h2>
+          <p class="ysq-sec-sub">他们的方向各不相同，但都在用自己的方式把影像做得更具体。</p>
+        </div>
+        <button class="ysq-more" type="button" data-ysq-join>申请入驻</button>
+      </div>
+      <div class="ysq-creator-grid">
+        <article class="ysq-creator">
+          <div class="ysq-creator-ava" style="background:linear-gradient(135deg,#e63946,#a81f2b)">陈</div>
+          <div class="ysq-creator-main">
+            <h3>陈叙白 <small>官方认证</small></h3>
+            <p class="ysq-field">纪实影像 · 城市探索</p>
+            <p>长期拍摄城市边缘空间，习惯用长镜头保留现场的呼吸感，作品节奏偏慢。</p>
+            <div class="ysq-creator-nums"><span><b>86</b>作品</span><span><b>32.4万</b>关注</span></div>
+          </div>
+        </article>
+        <article class="ysq-creator">
+          <div class="ysq-creator-ava" style="background:linear-gradient(135deg,#2f4f7f,#1b2c4a)">李</div>
+          <div class="ysq-creator-main">
+            <h3>李砚舟 <small>认证</small></h3>
+            <p class="ysq-field">教程干货 · 摄影技巧</p>
+            <p>把复杂的技术拆成可执行的步骤，视频里几乎不出现术语，新人也看得懂。</p>
+            <div class="ysq-creator-nums"><span><b>142</b>作品</span><span><b>51.8万</b>关注</span></div>
+          </div>
+        </article>
+        <article class="ysq-creator">
+          <div class="ysq-creator-ava" style="background:linear-gradient(135deg,#7a4b9c,#4a2d63)">沈</div>
+          <div class="ysq-creator-main">
+            <h3>沈知远 <small>官方认证</small></h3>
+            <p class="ysq-field">人物访谈 · 行业观察</p>
+            <p>做过八年文化记者，擅长在对话里找到那个让对方停顿三秒的问题。</p>
+            <div class="ysq-creator-nums"><span><b>64</b>作品</span><span><b>27.1万</b>关注</span></div>
+          </div>
+        </article>
+        <article class="ysq-creator">
+          <div class="ysq-creator-ava" style="background:linear-gradient(135deg,#c46b3d,#8f4520)">苏</div>
+          <div class="ysq-creator-main">
+            <h3>苏小满 <small>人气作者</small></h3>
+            <p class="ysq-field">生活方式 · 治愈影像</p>
+            <p>记录一个人吃饭、收拾房间、养植物的日常，画面朴素，但让人愿意看完。</p>
+            <div class="ysq-creator-nums"><span><b>208</b>作品</span><span><b>63.5万</b>关注</span></div>
+          </div>
+        </article>
+        <article class="ysq-creator">
+          <div class="ysq-creator-ava" style="background:linear-gradient(135deg,#3f6b6a,#22413f)">周</div>
+          <div class="ysq-creator-main">
+            <h3>周与禾 <small>新人推荐</small></h3>
+            <p class="ysq-field">实验影像 · 艺术美学</p>
+            <p>美术出身，喜欢把素材当材料用，剪辑手法大胆，作品常带着一点不安。</p>
+            <div class="ysq-creator-nums"><span><b>37</b>作品</span><span><b>11.2万</b>关注</span></div>
+          </div>
+        </article>
+        <article class="ysq-creator">
+          <div class="ysq-creator-ava" style="background:linear-gradient(135deg,#5a6b3a,#37451f)">许</div>
+          <div class="ysq-creator-main">
+            <h3>许南山 <small>认证</small></h3>
+            <p class="ysq-field">自然纪录 · 声音采集</p>
+            <p>带着录音设备上山下河，作品里最常见的不是画面，而是被忽略的环境声。</p>
+            <div class="ysq-creator-nums"><span><b>55</b>作品</span><span><b>19.6万</b>关注</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="ysq-rankband" id="ysqRank">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Charts</span>
+          <h2 class="ysq-sec-title">数据榜单：社区正在看什么</h2>
+          <p class="ysq-sec-sub">榜单依据近七日的完整观看完成度、收藏与讨论综合计算，每周一更新。</p>
+        </div>
+        <a class="ysq-more" href="#ysqVideos">进入影像库</a>
+      </div>
+      <div class="ysq-rank-grid">
+        <div class="ysq-rank">
+          <div class="ysq-rank-head"><h3>热度榜</h3><span>近七日</span></div>
+          <ol>
+            <li>一个人做晚饭的第五十天 <em>5.1万</em></li>
+            <li>守着一间旧书店的人 <em>4.2万</em></li>
+            <li>菜市场的十二小时 <em>3.9万</em></li>
+            <li>手机也能拍出好夜景 <em>3.3万</em></li>
+            <li>我们为什么还要去电影院 <em>2.7万</em></li>
+          </ol>
+        </div>
+        <div class="ysq-rank">
+          <div class="ysq-rank-head"><h3>新人榜</h3><span>本月</span></div>
+          <ol>
+            <li>第一支片：拍了我奶奶的院子 <em>1.8万</em></li>
+            <li>用三个镜头讲完一个故事 <em>1.5万</em></li>
+            <li>雨天窗外的十分钟 <em>1.2万</em></li>
+            <li>我把旧照片做成了动态 <em>0.9万</em></li>
+            <li>宿舍里的光影实验 <em>0.7万</em></li>
+          </ol>
+        </div>
+        <div class="ysq-rank">
+          <div class="ysq-rank-head"><h3>口碑榜</h3><span>长期</span></div>
+          <ol>
+            <li>长镜头里的旧城区 <em>9.6 分</em></li>
+            <li>三十七次呼吸 <em>9.4 分</em></li>
+            <li>山雾里的三种声音 <em>9.3 分</em></li>
+            <li>被折叠的三分钟 <em>9.1 分</em></li>
+            <li>把镜头交给邻居 <em>9.0 分</em></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 随笔 -->
+  <section class="ysq-sec ysq-notes" id="ysqNotes">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Notes</span>
+          <h2 class="ysq-sec-title">幕后随笔：拍摄之外的那些时刻</h2>
+          <p class="ysq-sec-sub">来自创作者的手记，记录那些没剪进成片里的事情。</p>
+        </div>
+      </div>
+      <div class="ysq-note-grid">
+        <article class="ysq-note">
+          <div class="ysq-note-mark" aria-hidden="true">“</div>
+          <h3>在菜市场蹲了三天，最想拍的是一个不说话的人</h3>
+          <p>第三天早上，我注意到一位每天来买两块豆腐的老人。他从头到尾没跟任何人多说什么，只是把钱放好、点头、离开。最后成片里他只出现了九秒，但那九秒我剪了很多遍。</p>
+          <div class="ysq-note-foot"><span>陈叙白</span><span>2026 / 11 / 12</span></div>
+        </article>
+        <article class="ysq-note">
+          <div class="ysq-note-mark" aria-hidden="true">“</div>
+          <h3>教别人拍片之后，我才发现自己一直在偷懒</h3>
+          <p>为了把“为什么这个镜头要这样放”讲清楚，我被迫回头重新理解自己那些凭直觉做出来的决定。教程拍到最后，受益最大的可能是我自己。</p>
+          <div class="ysq-note-foot"><span>李砚舟</span><span>2026 / 11 / 08</span></div>
+        </article>
+        <article class="ysq-note">
+          <div class="ysq-note-mark" aria-hidden="true">“</div>
+          <h3>采访最难的，是让对方愿意沉默两秒</h3>
+          <p>很多人以为访谈的关键是提问，其实关键是不急着填补空白。那两秒的沉默里，往往藏着他真正想说的东西。这条经验，我用了整整八年才学会。</p>
+          <div class="ysq-note-foot"><span>沈知远</span><span>2026 / 11 / 03</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评价 -->
+  <section class="ysq-sec ysq-reviews" id="ysqReviews">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Community Voices</span>
+          <h2 class="ysq-sec-title">用户评价：他们在这里留下了什么</h2>
+          <p class="ysq-sec-sub">来自不同使用场景的真实反馈，语气与关注点各不相同。</p>
+        </div>
+      </div>
+      <div class="ysq-review-grid">
+        <article class="ysq-review">
+          <div class="ysq-review-top">
+            <span class="ysq-avatar" style="background:#3f6b6a">阿</span>
+            <div><b>阿岚不吃香菜</b><small>使用 2 年 3 个月</small></div>
+            <span class="ysq-stars" aria-label="评分 5 星">★★★★★</span>
+          </div>
+          <p>最喜欢的是专题页的策展引言，写得比很多影评号都克制。我会把它当学习材料看，一篇能读很久。</p>
+          <div class="ysq-review-echo">官方回复：感谢认可，策展引言一直是编辑部最花时间打磨的部分。</div>
+        </article>
+        <article class="ysq-review">
+          <div class="ysq-review-top">
+            <span class="ysq-avatar" style="background:#7a4b9c">木</span>
+            <div><b>木子田心</b><small>使用 8 个月</small></div>
+            <span class="ysq-stars" aria-label="评分 4 星">★★★★☆</span>
+          </div>
+          <p>检索体验挺好，标签做得细。唯一希望增加的是按片长筛选，想找十分钟以内短片的时候有点费劲。</p>
+          <div class="ysq-review-echo">官方回复：片长筛选已在测试，预计随下次版本更新上线。</div>
+        </article>
+        <article class="ysq-review">
+          <div class="ysq-review-top">
+            <span class="ysq-avatar" style="background:#c46b3d">小</span>
+            <div><b>小满的邻居</b><small>使用 1 年 5 个月</small></div>
+            <span class="ysq-stars" aria-label="评分 5 星">★★★★★</span>
+          </div>
+          <p>跟着教程学的分镜，第一次投稿就通过了专题推荐，那一刻真的很激动。平台给新人的反馈很具体。</p>
+          <div class="ysq-review-echo">官方回复：期待你的下一支作品，记得在创作手记里多写两句。</div>
+        </article>
+        <article class="ysq-review">
+          <div class="ysq-review-top">
+            <span class="ysq-avatar" style="background:#2f4f7f">老</span>
+            <div><b>老周的放映机</b><small>使用 3 年</small></div>
+            <span class="ysq-stars" aria-label="评分 5 星">★★★★★</span>
+          </div>
+          <p>从早期的片库用到现在，能明显感觉到内容生态在变厚。最欣赏的一点是它不追热点，愿意做长线的专题。</p>
+          <div class="ysq-review-echo">官方回复：长线策展会继续做下去，也欢迎推荐你想看的方向。</div>
+        </article>
+        <article class="ysq-review">
+          <div class="ysq-review-top">
+            <span class="ysq-avatar" style="background:#5a6b3a">林</span>
+            <div><b>林间小径</b><small>使用 6 个月</small></div>
+            <span class="ysq-stars" aria-label="评分 4 星">★★★★☆</span>
+          </div>
+          <p>画面质量确实稳定，没遇到过卡顿或模糊的情况。希望创作者主页能展示合作联系方式，约片方便点。</p>
+          <div class="ysq-review-echo">官方回复：创作者主页的合作意向模块正在完善中。</div>
+        </article>
+        <article class="ysq-review">
+          <div class="ysq-review-top">
+            <span class="ysq-avatar" style="background:#e63946">南</span>
+            <div><b>南方有雨</b><small>使用 1 年</small></div>
+            <span class="ysq-stars" aria-label="评分 5 星">★★★★★</span>
+          </div>
+          <p>晚上睡前会打开生活类的内容看一会儿，节奏不吵，很适合放松。这里的社区氛围比想象中温和。</p>
+          <div class="ysq-review-echo">官方回复：谢谢，温和也是我们一直想守住的东西。</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 & 伙伴 -->
+  <section class="ysq-sec ysq-news" id="ysqNews">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head">
+        <div>
+          <span class="ysq-kicker">Newsroom</span>
+          <h2 class="ysq-sec-title">企业动态与合作伙伴</h2>
+          <p class="ysq-sec-sub">官方发布的平台更新、活动公告与长期合作机构。</p>
+        </div>
+      </div>
+      <div class="ysq-news-grid">
+        <div class="ysq-timeline">
+          <div class="ysq-tl-item">
+            <time>2026 / 11 / 18</time>
+            <h3>影像专题《城市二十四帧·冬季篇》完成第 12 集更新</h3>
+            <p>本季专题共收录十二位创作者作品，覆盖九座城市，专题策展引言同步上线。</p>
+          </div>
+          <div class="ysq-tl-item">
+            <time>2026 / 11 / 14</time>
+            <h3>创作者扶持计划第三期开放报名</h3>
+            <p>本期新增纪实叙事与动画短片两个赛道，入选创作者将获得专题推荐与制作支持。</p>
+          </div>
+          <div class="ysq-tl-item">
+            <time>2026 / 11 / 06</time>
+            <h3>片库检索系统升级：支持多标签组合筛选</h3>
+            <p>用户可同时选择类型、年代与时长条件，检索结果响应速度较上一版提升约四成。</p>
+          </div>
+          <div class="ysq-tl-item">
+            <time>2026 / 10 / 28</time>
+            <h3>与三家高校影像专业达成内容合作</h3>
+            <p>合作将围绕学生作品展映、联合策展与创作工作坊展开，首批合作作品预计十二月上线。</p>
+          </div>
+          <div class="ysq-tl-item">
+            <time>2026 / 10 / 15</time>
+            <h3>社区内容规范更新公告</h3>
+            <p>进一步明确原创标注与版权声明的填写要求，并新增举报反馈的处理时限说明。</p>
+          </div>
+        </div>
+        <div>
+          <div class="ysq-partners">
+            <div class="ysq-partner">
+              <span class="ysq-partner-mark" style="background:#2f4f7f">光</span>
+              <div><b>光影纪念馆</b><small>影像资料合作</small></div>
+            </div>
+            <div class="ysq-partner">
+              <span class="ysq-partner-mark" style="background:#7a4b9c">幕</span>
+              <div><b>幕间文化</b><small>专题联合策展</small></div>
+            </div>
+            <div class="ysq-partner">
+              <span class="ysq-partner-mark" style="background:#5a6b3a">野</span>
+              <div><b>野声录音室</b><small>声音制作支持</small></div>
+            </div>
+            <div class="ysq-partner">
+              <span class="ysq-partner-mark" style="background:#c46b3d">纸</span>
+              <div><b>纸上放映</b><small>独立影片展映</small></div>
+            </div>
+            <div class="ysq-partner">
+              <span class="ysq-partner-mark" style="background:#3f6b6a">帧</span>
+              <div><b>帧率研究所</b><small>技术顾问单位</small></div>
+            </div>
+            <div class="ysq-partner">
+              <span class="ysq-partner-mark" style="background:#e63946">青</span>
+              <div><b>青年影像基金</b><small>创作资金支持</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ysq-sec ysq-faq" id="ysqFaq">
+    <div class="ysq-wrap">
+      <div class="ysq-sec-head" style="justify-content:center;text-align:center">
+        <div>
+          <span class="ysq-kicker" style="justify-content:center">Help Center</span>
+          <h2 class="ysq-sec-title">帮助中心：常见问题</h2>
+          <p class="ysq-sec-sub" style="margin-left:auto;margin-right:auto">关于内容访问、创作者入驻与版权说明，这里给出统一答复。</p>
+        </div>
+      </div>
+      <div class="ysq-faq-list">
+        <details class="ysq-faq-item" open>
+          <summary>影视大全的内容是如何组织的？</summary>
+          <p>内容按影片、专题、创作者三条主线组织。影片以结构化条目入库，专题由编辑部围绕具体主题策划，创作者拥有独立主页展示作品与手记。三者互相链接，方便从任意入口进入后继续探索。</p>
+        </details>
+        <details class="ysq-faq-item">
+          <summary>普通用户可以投稿自己的作品吗？</summary>
+          <p>可以。站内提供统一投稿入口，支持视频文件与作品说明上传。投稿作品会经过内容与画质审核，通过后进入片库，优秀作品有机会被选入专题策展。</p>
+        </details>
+        <details class="ysq-faq-item">
+          <summary>创作者入驻需要满足什么条件？</summary>
+          <p>我们更看重持续的创作能力而非粉丝数量。申请时需提交至少三支原创作品与一段创作自述，审核周期通常为五到七个工作日。</p>
+        </details>
+        <details class="ysq-faq-item">
+          <summary>平台对版权是如何处理的？</summary>
+          <p>影视大全坚持正版授权原则，公开条目均需提供清晰的授权或原创声明。如发现版权问题，可通过页面底部的反馈通道提交材料，我们会在规定时限内处理。</p>
+        </details>
+        <details class="ysq-faq-item">
+          <summary>专题企划的选题由谁决定？</summary>
+          <p>选题由编辑部提出，并结合社区讨论热度与创作者投稿方向综合确定。我们也会定期向用户征集想看的主题，入选建议会署名致谢。</p>
+        </details>
+        <details class="ysq-faq-item">
+          <summary>遇到播放或检索异常怎么办？</summary>
+          <p>建议先尝试刷新页面或更换浏览器。如问题持续，请通过联系表单说明具体条目与设备信息，技术团队会在工作日内跟进反馈。</p>
+        </details>
+        <details class="ysq-faq-item">
+          <summary>如何参与社区的话题讨论与投票？</summary>
+          <p>登录后可在各专题页与创作者主页参与讨论。平台会不定期发起主题投票，用于决定下一期策展方向，投票结果会在动态栏目公示。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="ysq-sec ysq-contact" id="ysqContact">
+    <div class="ysq-wrap">
+      <div class="ysq-contact-grid">
+        <div>
+          <span class="ysq-kicker" style="color:#f4b942">Contact &amp; Submit</span>
+          <h2>联系影视大全：投稿、合作与反馈</h2>
+          <p>无论你是想投稿一支作品、洽谈品牌合作，还是对内容生态提出建议，都欢迎通过下方方式联系我们。官方团队会在两个工作日内回复。</p>
+          <div class="ysq-contact-info">
+            <div><b>内容投稿</b><span>创作者通道全年开放，支持视频与图文作品提交</span></div>
+            <div><b>品牌合作</b><span>专题联合策展、影像项目共建、内容授权咨询</span></div>
+            <div><b>媒体联络</b><span>企业动态与官方发布信息对接</span></div>
+            <div><b>工作时间</b><span>周一至周五 10:00 - 19:00（法定节假日除外）</span></div>
+          </div>
+        </div>
+        <div class="ysq-contact-card">
+          <h3>在线留言</h3>
+          <p>填写基本信息，说明你的需求类型与具体内容。</p>
+          <form id="ysqContactForm">
+            <div class="ysq-field-row">
+              <input type="text" name="name" placeholder="你的称呼" required>
+              <input type="email" name="mail" placeholder="联系邮箱" required>
+            </div>
+            <select name="type" aria-label="需求类型">
+              <option>作品投稿</option>
+              <option>品牌合作</option>
+              <option>版权与内容反馈</option>
+              <option>其他建议</option>
+            </select>
+            <div style="margin-top:10px">
+              <textarea name="msg" placeholder="简单描述你的想法或作品" required></textarea>
+            </div>
+            <button class="ysq-btn ysq-btn-primary" type="submit">提交留言</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ysq-footer">
+  <div class="ysq-wrap">
+    <div class="ysq-footer-grid">
+      <div class="ysq-footer-brand">
+        <a class="ysq-logo" href="#ysqHome" aria-label="返回影视大全官方网站首页">
+          <span class="ysq-logo-mark" aria-hidden="true"></span>
+          <span class="ysq-logo-word"><strong>影视大全</strong><span>Yingshi Portal</span></span>
+        </a>
+        <p>影视大全官方网站，一个以影视内容为核心的品牌影像平台。我们持续运营片库、专题与创作者社区，坚持正版高清与原创策展，做值得信赖的影像入口。</p>
+      </div>
+      <div class="ysq-footer-col">
+        <h3>浏览</h3>
+        <ul>
+          <li><a href="#ysqFocus">焦点内容</a></li>
+          <li><a href="#ysqVideos">影像库</a></li>
+          <li><a href="#ysqTopics">专题企划</a></li>
+          <li><a href="#ysqRank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div class="ysq-footer-col">
+        <h3>社区</h3>
+        <ul>
+          <li><a href="#ysqCreators">创作者矩阵</a></li>
+          <li><a href="#ysqNotes">幕后随笔</a></li>
+          <li><a href="#ysqReviews">用户评价</a></li>
+          <li><a href="#ysqNews">企业动态</a></li>
+        </ul>
+      </div>
+      <div class="ysq-footer-col">
+        <h3>关于</h3>
+        <ul>
+          <li><a href="#ysqAbout">品牌解析</a></li>
+          <li><a href="#ysqFaq">帮助中心</a></li>
+          <li><a href="#ysqContact">联系与投稿</a></li>
+          <li><button type="button" data-ysq-share="影视大全 品牌官方网站" style="color:inherit;font-size:inherit;text-align:left;padding:0">分享本站</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ysq-footer-bottom">
+      <span>© 2026 影视大全 版权所有 · 官方网站 · 持续运营中</span>
+      <span>内容生态 · 原创策展 · 正版高清 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<button class="ysq-top" id="ysqTop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>
+</button>
+
+<div class="ysq-toast" id="ysqToast" role="status" aria-live="polite"></div>
+
+<!-- 分享弹窗 -->
+<div class="ysq-modal" id="ysqShareModal" role="dialog" aria-modal="true" aria-labelledby="ysqShareTitle">
+  <div class="ysq-modal-box">
+    <button class="ysq-modal-close" type="button" data-ysq-close aria-label="关闭">×</button>
+    <h3 id="ysqShareTitle">分享给你身边的人</h3>
+    <p id="ysqShareDesc">把喜欢的内容分享出去，让更多同好找到这里。</p>
+    <div class="ysq-share-row">
+      <button type="button" data-ysq-share-to="微信">微信</button>
+      <button type="button" data-ysq-share-to="微博">微博</button>
+      <button type="button" data-ysq-share-to="QQ">QQ</button>
+      <button type="button" data-ysq-share-to="朋友圈">朋友圈</button>
+    </div>
+    <div class="ysq-copy-row">
+      <input type="text" id="ysqShareInput" readonly aria-label="分享链接">
+      <button type="button" id="ysqCopyBtn">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<!-- 入驻/投稿弹窗 -->
+<div class="ysq-modal" id="ysqJoinModal" role="dialog" aria-modal="true" aria-labelledby="ysqJoinTitle">
+  <div class="ysq-modal-box">
+    <button class="ysq-modal-close" type="button" data-ysq-close aria-label="关闭">×</button>
+    <h3 id="ysqJoinTitle">创作者入驻申请</h3>
+    <p>留下基本信息与作品方向，官方团队会在五个工作日内与你联系。</p>
+    <form class="ysq-modal-form" id="ysqJoinForm">
+      <input type="text" name="nick" placeholder="创作者昵称" required>
+      <input type="email" name="mail" placeholder="联系邮箱" required>
+      <input type="text" name="field" placeholder="擅长领域，如：纪实影像 / 教程">
+      <textarea name="intro" placeholder="简单介绍你的创作方向与代表作品"></textarea>
+      <button class="ysq-btn ysq-btn-primary" type="submit">提交申请</button>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('ysqToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('is-show');
+    }, 2100);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('ysqBurger');
+  var nav = document.getElementById('ysqNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+      Array.prototype.forEach.call(nav.querySelectorAll('a'), function(a){
+        a.classList.toggle('is-active', a === e.target);
+      });
+    }
+  });
+
+  /* 搜索 */
+  var searchInput = document.getElementById('ysqSearchInput');
+  var searchBtn = document.getElementById('ysqSearchBtn');
+  var searchHint = document.getElementById('ysqSearchHint');
+  var pool = [
+    {t:'菜市场的十二小时', k:'纪实 城市探索'},
+    {t:'手机也能拍出好夜景', k:'教程 实用技巧'},
+    {t:'我们为什么还要去电影院', k:'访谈 行业观察'},
+    {t:'一个人做晚饭的第五十天', k:'生活 治愈'},
+    {t:'被折叠的三分钟', k:'实验 创作幕后'},
+    {t:'守着一间旧书店的人', k:'纪实 情感故事'},
+    {t:'城市二十四帧 · 冬季篇', k:'专题 城市'},
+    {t:'手艺人的下午', k:'专题 手作'},
+    {t:'陈叙白', k:'创作者 纪实'},
+    {t:'李砚舟', k:'创作者 教程'},
+    {t:'沈知远', k:'创作者 访谈'},
+    {t:'周与禾', k:'创作者 实验影像'}
+  ];
+
+  function renderHint(q){
+    var kw = q.trim();
+    var list = kw ? pool.filter(function(i){
+      return i.t.indexOf(kw) > -1 || i.k.indexOf(kw) > -1;
+    }) : pool.slice(0,6);
+    if(!list.length){
+      searchHint.innerHTML = '<li class="ysq-search-empty" style="display:block">没有找到相关内容，试试“纪实”“教程”或创作者名字</li>';
+    } else {
+      searchHint.innerHTML = list.slice(0,6).map(function(i){
+        var title = i.t;
+        if(kw){
+          title = i.t.split(kw).join('<em>' + kw + '</em>');
+        }
+        return '<li data-ysq-target="' + i.t + '">' + title + '<span>' + i.k.split(' ')[0] + '</span></li>';
+      }).join('');
+    }
+    searchHint.classList.add('is-open');
+  }
+
+  searchInput.addEventListener('input', function(){
+    renderHint(searchInput.value);
+  });
+  searchInput.addEventListener('focus', function(){
+    renderHint(searchInput.value);
+  });
+  searchHint.addEventListener('click', function(e){
+    var li = e.target.closest('li[data-ysq-target]');
+    if(!li) return;
+    var val = li.getAttribute('data-ysq-target');
+    searchInput.value = val;
+    searchHint.classList.remove('is-open');
+    toast('已定位到：' + val);
+    var target = document.getElementById('ysqVideos');
+    if(val.indexOf('专题') > -1) target = document.getElementById('ysqTopics');
+    if(val.indexOf('陈') > -1 || val.indexOf('李') > -1 || val.indexOf('沈') > -1 || val.indexOf('周') > -1) target = document.getElementById('ysqCreators');
+    if(target) target.scrollIntoView({behavior:'smooth'});
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.ysq-search-wrap')){
+      searchHint.classList.remove('is-open');
+    }
+  });
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    if(!kw){
+      toast('请输入关键词，如“纪实”“教程”');
+      return;
+    }
+    renderHint(kw);
+    toast('已为你筛选与“' + kw + '”相关的内容');
+    var cards = document.querySelectorAll('#ysqVideoGrid .ysq-card');
+    var hit = 0;
+    Array.prototype.forEach.call(cards, function(c){
+      var txt = c.textContent;
+      var show = txt.indexOf(kw) > -1;
+      if(show) hit++;
+      c.hidden = !show;
+    });
+    if(hit === 0){
+      Array.prototype.forEach.call(cards, function(c){ c.hidden = false; });
+      toast('影像库暂无完全匹配，已展示全部内容');
+    }
+    document.getElementById('ysqVideos').scrollIntoView({behavior:'smooth'});
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 标签筛选 */
+  var filter = document.getElementById('ysqFilter');
+  filter.addEventListener('click', function(e){
+    var btn = e.target.closest('button[data-ysq-filter]');
+    if(!btn) return;
+    Array.prototype.forEach.call(filter.querySelectorAll('button'), function(b){
+      b.classList.toggle('is-active', b === btn);
+    });
+    var cat = btn.getAttribute('data-ysq-filter');
+    Array.prototype.forEach.call(document.querySelectorAll('#ysqVideoGrid .ysq-card'), function(c){
+      c.hidden = (cat !== 'all' && c.getAttribute('data-ysq-category') !== cat);
+    });
+  });
+
+  /* 点赞 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-ysq-like]');
+    if(likeBtn){
+      var numEl = likeBtn.querySelector('[data-ysq-like-num]');
+      var n = parseInt(numEl.textContent.replace(/[^\d]/g,''),10) || 0;
+      var on = likeBtn.classList.toggle('is-on');
+      likeBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      numEl.textContent = on ? (n + 1) : Math.max(0, n - 1);
+      toast(on ? '已加入你喜欢的内容' : '已取消喜欢');
+      return;
+    }
+  });
+
+  /* 分享弹窗 */
+  var shareModal = document.getElementById('ysqShareModal');
+  var shareDesc = document.getElementById('ysqShareDesc');
+  var shareInput = document.getElementById('ysqShareInput');
+  var shareText = '影视大全 品牌官方网站';
+
+  function openShare(title){
+    shareText = title || '影视大全 品牌官方网站';
+    shareDesc.textContent = '“' + shareText + '”';
+    shareInput.value = shareText;
+    shareModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeAllModals(){
+    Array.prototype.forEach.call(document.querySelectorAll('.ysq-modal'), function(m){
+      m.classList.remove('is-open');
+    });
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e){
+    var shareBtn = e.target.closest('[data-ysq-share]');
+    if(shareBtn){
+      openShare(shareBtn.getAttribute('data-ysq-share'));
+      return;
+    }
+    if(e.target.closest('[data-ysq-close]')){
+      closeAllModals();
+      return;
+    }
+    if(e.target.classList.contains('ysq-modal')){
+      closeAllModals();
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeAllModals();
+  });
+
+  document.getElementById('ysqCopyBtn').addEventListener('click', function(){
+    var text = shareText;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        toast('内容已复制，可粘贴分享');
+      }).catch(function(){
+        shareInput.select();
+        toast('请手动复制选中的内容');
+      });
+    } else {
+      shareInput.select();
+      toast('请手动复制选中的内容');
+    }
+  });
+
+  document.querySelectorAll('[data-ysq-share-to]').forEach(function(b){
+    b.addEventListener('click', function(){
+      toast('已生成' + b.getAttribute('data-ysq-share-to') + '分享文案，可粘贴发送');
+    });
+  });
+
+  /* 入驻弹窗 */
+  var joinModal = document.getElementById('ysqJoinModal');
+  document.querySelectorAll('[data-ysq-join]').forEach(function(b){
+    b.addEventListener('click', function(){
+      joinModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  document.getElementById('ysqJoinForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    closeAllModals();
+    this.reset();
+    toast('入驻申请已提交，我们会在五个工作日内联系你');
+  });
+
+  /* 联系表单 */
+  document.getElementById('ysqContactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    this.reset();
+    toast('留言已收到，官方团队会尽快回复');
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('ysqTop');
+  window.addEventListener('scroll', function(){
+    topBtn.classList.toggle('is-show', window.scrollY > 520);
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 数字滚动 */
+  var counted = false;
+  function runCount(){
+    if(counted) return;
+    counted = true;
+    document.querySelectorAll('[data-ysq-count]').forEach(function(el){
+      var target = parseInt(el.getAttribute('data-ysq-count'),10);
+      var start = performance.now();
+      var dur = 1100;
+      function step(now){
+        var p = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.floor(target * eased);
+        el.textContent = val.toLocaleString('en-US');
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target.toLocaleString('en-US');
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if(window.IntersectionObserver){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCount(); io.disconnect(); }
+      });
+    }, {threshold:.3});
+    io.observe(document.querySelector('.ysq-hero-stats'));
+  } else {
+    runCount();
+  }
+
+  /* 首屏按钮兼容点击 */
+  document.querySelectorAll('.ysq-play').forEach(function(b){
+    b.addEventListener('click', function(){
+      toast('已打开分享面板，可发送给朋友');
+    });
+  });
+
+})();
+</script>
+</body>
+                  </html>
